@@ -438,6 +438,171 @@ We will spend the rest of our time in JavaScript thinking about functions, so st
   - `Object`
   - `Function`
 
+
+## Learning Comprehension Questions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 86c7f107-9c0d-449c-91bf-8e7a4f25e6f3
+* title: JS Objects
+* points: 
+* topics: javascript, js-objects
+
+##### !question
+
+What is the result of this JavaScript code:
+
+```javascript
+const obj = {
+  name: 'Ada Lovelace',
+  age: 247,
+  title: 'Senior Software Engineer'
+}
+
+const field = 'name';
+obj[field]  // <-- What is the value of this
+```
+
+##### !end-question
+
+##### !options
+
+* 'Ada Lovelace'
+* 247
+* 'name'
+* undefined
+
+##### !end-options
+
+##### !answer
+
+* 'Ada Lovelace'
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can use a variable inside the square brackets [] for a JavaScript object, just like you can in a Ruby hash.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 74eeafc9-c000-4de7-afa1-7a1e0be68ade
+* title: JS Objects
+* points: 
+* topics: javascript, js-objects
+
+##### !question
+
+What is the result of this JavaScript code:
+
+```javascript
+const obj = {
+  name: 'Ada Lovelace',
+  age: 247,
+  title: 'Senior Software Engineer'
+}
+
+const field = 'name';
+obj.field  // <-- What is the value of this
+```
+
+##### !end-question
+
+##### !options
+
+* 'Ada Lovelace'
+* 247
+* 'name'
+* undefined
+
+##### !end-options
+
+##### !answer
+
+* undefined
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You **cannot** use a variable after the `.` with a JavaScript object, unlike the square brackets.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 9afd1758-fda8-4a48-bc9f-21f30a4ce393
+* title: Interpoloation
+* points: 1
+* topics: javascript, js-interpolation
+
+##### !question
+
+What is the result of the following code:
+
+```javascript
+`Two plus two is ${ 2  + 2 }`
+```
+
+##### !end-question
+
+##### !options
+
+* 'Two plus two is ${ 2  + 2 }'
+* 'Two plus two is 4'
+* null
+* undefined
+
+##### !end-options
+
+##### !answer
+
+* 'Two plus two is 4'
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can do string interpolation with backticks in JavaScript.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Summary: The Data Type Ruby vs. JavaScript Abbreviated List
 
 | Data Type | Things to note about Ruby vs. JavaScript                                                                                                               |
