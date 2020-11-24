@@ -1,5 +1,7 @@
 # Welcome to JavaScript!
 
+
+
 ## Learning Goals
 
 By the end of this lesson we will be able to...
@@ -368,7 +370,7 @@ Note the following similarities between JavaScript objects and Ruby hashes:
 
 In your Node REPL, copy-and-paste these lines. Do you get what you expect?
 
-1.
+1.  Example object:
     ```javascript
     let testObj = {
       someNum: 5,
@@ -385,7 +387,7 @@ In your Node REPL, copy-and-paste these lines. Do you get what you expect?
 1. `testObj.someNestedObj;`
 1. `testObj.someNestedObj.someOtherNum;`
 1. `testObj['someNestedObj'].someOtherNum;`
-1. `testObj['someNestedObj']['someOtherNum'];`
+1.  `testObj['someNestedObj']['someOtherNum'];`
 1. `let key = 'someNestedObj';`
 1. `testObj[key];`
 1. `testObj.key;`
