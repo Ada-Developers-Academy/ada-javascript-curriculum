@@ -6,26 +6,32 @@ This is the `.eslintrc.json` file we will use in terminal-based command line app
 
 ```json
 {
-  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "es2021": true,
-    "node": true,
-    "jest/globals": true
+    "node": true
   },
-  "extends": ["eslint:recommended", "plugin:jest/recommended"],
+  "extends": ["plugin:jest/recommended", "eslint:recommended"],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react-app", "react-app/jest"],
+  "plugins": ["jest"],
   "rules": {
     "no-unused-vars": "warn",
+    "no-var": "warn",
     "no-console": "off",
     "func-names": "off",
-    "comma-dangle": ["only-multiline"]
+    "comma-dangle": ["warn", "only-multiline"],
+    "quotes": [
+      "error",
+      "single",
+      { "allowTemplateLiterals": true, "avoidEscape": true }
+    ],
+    "camelcase": "error"
   }
 }
+
 ```
 
 ## React Linting File
@@ -39,17 +45,24 @@ This is the `.eslintrc.json` file we will use in terminal-based command line app
     "node": true,
     "jest/globals": true
   },
-  "extends": ["standard", "plugin:jest/recommended"],
+  "extends": ["react-app", "plugin:jest/recommended", "plugin:jsx-a11y/recommended"],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["jest"],
+  "plugins": ["jest", "jsx-a11y"],
   "rules": {
     "no-unused-vars": "warn",
+    "no-var": "warn",
     "no-console": "off",
     "func-names": "off",
-    "comma-dangle": ["only-multiline"]
+    "comma-dangle": ["warn", "only-multiline"],
+    "quotes": [
+      "error",
+      "single",
+      { "allowTemplateLiterals": true, "avoidEscape": true }
+    ],
+    "camelcase": "error"
   }
 }
 ```
