@@ -371,6 +371,7 @@ Note the following similarities between JavaScript objects and Ruby hashes:
 In your Node REPL, copy-and-paste these lines. Do you get what you expect?
 
 1.  Example object:
+
     ```javascript
     let testObj = {
       someNum: 5,
@@ -380,6 +381,7 @@ In your Node REPL, copy-and-paste these lines. Do you get what you expect?
       }
     };
     ```
+
 1. `testObj;`
 1. `testObj['someNum'];`
 1. `testObj.someNum;`
