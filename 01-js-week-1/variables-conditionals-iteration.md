@@ -340,3 +340,167 @@ Since we haven't learned about those yet we'll hold off on showing the syntax un
 | Conditionals Syntax | We use `if ... else if ... else` in JavaScript. There are a lot more parentheses and curly braces, too.
 | String Equality | In JavaScript, to check if two strings are equal, we use `===`
 | Iteration Syntax | We will use `for`, `while`, and `forEach` loops in JavaScript to iterate. There are a lot more available, too!
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: multiple-choice
+* id: 1e557275-f554-4477-bc22-30c5f200d708
+* title: Predict the Output
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What is the output of the following code:
+```javascript
+favDogBreed;
+let favDogBreed = "Newfoundland";
+```
+
+##### !end-question
+
+##### !options
+
+* undefined
+* reference error
+* "Newfoundland"
+
+##### !end-options
+
+##### !answer
+
+reference error
+
+##### !end-answer
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: multiple-choice
+* id: 1aab9c44-e3dd-4f77-b6aa-9597ae9be411
+* title: Predict the Output
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+What is the output of the following code:
+``` javascript
+const temp = "3";
+for(let i = 0; i <= 10; i++) {
+  if(i == temp){
+    return true;
+  }
+}
+return false;
+```
+
+##### !end-question
+
+##### !options
+
+* true
+* false
+
+##### !end-options
+
+##### !answer
+
+true
+
+##### !end-answer
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+The == sign tests for loose equality. 3 and "3" are not the strictly equal, but the == sign tries to convert values to a common data type *first* before comparing. Thus 3 and "3" returns **true**.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: c629737a-1172-4c73-8044-efc01614970d
+* title: Code Conversion
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+Solve the following problem with a ternary operator: 
+If the variable `input` is of data type string, return `true`; otherwise, return `false`.
+
+##### !end-question
+
+##### !answer
+
+```javascript
+(typeof input === "string" ? true : false)
+```
+
+##### !end-answer
+
+##### !placeholder
+
+write your ternary operator here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+Make sure you are using strict equality and spacing appropriately.
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
