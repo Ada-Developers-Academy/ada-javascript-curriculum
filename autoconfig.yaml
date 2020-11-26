@@ -18,3 +18,7 @@ Standards:
         Type: Lesson
         UID: f752396411eec3cf6287dc244b9f366d
         Path: /01-js-week-1/introduction-to-js.md
+      -
+        Type: Lesson
+        UID: ead12e11-67b9-43c1-b3f2-dd0355c63e47
+        Path: /01-js-week-1/variables-conditionals-iteration.md
