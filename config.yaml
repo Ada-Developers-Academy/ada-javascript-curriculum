@@ -7,14 +7,12 @@
 
 ---
 Standards:
-  -
-    Title: Js Week 1
+  - Title: Js Week 1
     Description: Js Week 1
     UID: c98d17d95358299af09b0b276d67a3e6
     SuccessCriteria:
       - success criteria
     ContentFiles:
-      -
-        Type: Lesson
-        UID: f752396411eec3cf6287dc244b9f366d
-        Path: /01-js-week-1/introduction-to-js.md
+      - Type: Lesson
+        UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
+        Path: /01-js-week-1/js-intro.md
