@@ -42,7 +42,9 @@ In VS Code please install the Eslint extension.  This extension will work with a
 Some useful, but not required extensions for JavaScript:
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) - This makes matching brackets and braces `{}, () and []` show up as matching colors.
 - [Jest Runner](https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner) - a way to run specific tests in VS Code.
-- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - A way to collaborate on the same file in VS code remotely.
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)   
+    - A way to collaborate on the same file in VS code remotely.
+    - It does disable some [code lenses](https://code.visualstudio.com/blogs/2017/02/12/code-lens-roundup) when it's running.
 - [Prettier Eslint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint) - A formatter to fix format or style mistakes automatically.
 - [Indent Rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - uses colors to help you match indentation.
 
