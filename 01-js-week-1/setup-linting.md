@@ -126,7 +126,7 @@ Notice the `Quick Fix` link on the right-side of the message.  That will open a 
 
 ## Sample Ada Linting Configurations
 
-We also have a [separate resource file listing](examples/eslintrc.examples.resource.md) a couple of linting configurations we will use at ada.
+We also have a [separate resource file](examples/eslintrc.examples.resource.md) listing a couple of linting configurations we will use at Ada.
 
 
 ## Optional:  Setting up Eslint On a New Project
