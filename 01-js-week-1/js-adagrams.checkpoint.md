@@ -10,7 +10,7 @@ In this project you will recreate your Ruby Calculator project with JavaScript. 
 * type: testable-project
 * id: f9613be1-491c-41f9-81f0-a58c144811b0
 * title: JS Calculator
-* upstream: https://github.com/cheezitman/js-adagrams
+* upstream: https://github.com/ada-c14/js-adagrams
 * validate_fork: false
 * points: 0
 * topics: javascript
