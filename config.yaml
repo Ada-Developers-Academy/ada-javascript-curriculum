@@ -13,6 +13,15 @@ Standards:
     SuccessCriteria:
       - success criteria
     ContentFiles:
-      - Type: Lesson
+      -
+        Type: Lesson
+        UID: 6417cc03-a1be-4e53-9886-ca4559062e3c
+        Path: /01-js-week-1/setup-linting.md
+      -
+        Type: Resource
+        UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
+        Path: /01-js-week-1/examples/eslintrc.examples.resource.md
+      - 
+        Type: Lesson
         UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
         Path: /01-js-week-1/js-intro.md
