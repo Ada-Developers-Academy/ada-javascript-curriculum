@@ -25,3 +25,8 @@ Standards:
         Type: Lesson
         UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
         Path: /01-js-week-1/js-intro.md
+      -
+        Type: Checkpoint
+        UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
+        Path: /01-js-week-1/js-adagrams.checkpoint.md
+
