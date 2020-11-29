@@ -31,40 +31,311 @@ Note the weird `});` on the last line. Anonymous functions can quickly become di
 
 
 Answer the following questions:
+<!--BEGIN CHALLENGE-->
 
-1. For the `doMath` function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
-1. What line _invokes_ the `doMath` function? What do we pass in as an argument? What data type is that argument?
-1. Where is the anonymous function? For the anonymous function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
-1. What does the anonymous function do?
-1. In the `doMath` function, how do we use the variable `operation`?
-1. What does running this script print out?
+### !challenge
 
-<details>
+* type: short-answer
+* id: a0a99e89-b13a-417e-bb78-d836e587ad73
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
 
-  <summary>
-    Check your answers here!
-  </summary>
+##### !question
 
-  1. 1 parameter named `operation` that is a function
-  1. `doMath(...)`. We pass in an anonymous function as an argument.
-  1. The anonymous function is in the line where we invoke `doMath()`. It takes in 1 parameter named `num` that is a number
-  1. The anonymous function squares the number (multiplies it with itself)
-  1. Because `operation` is a function, we _invoke_ the `operation` function with `let result = operation(i);`
-  1.
-      ```
-      0: 0
-      1: 1
-      2: 4
-      3: 9
-      4: 16
-      5: 25
-      6: 36
-      7: 49
-      8: 64
-      9: 81
-      ```
+For the `doMath` function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
 
-</details>
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+1 parameter named `operation` that is a function
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 220a581a-f8d2-47f4-9ab7-dd68034e04d5
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What line _invokes_ the `doMath` function? What do we pass in as an argument? What data type is that argument?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+`doMath(...)`. We pass in an anonymous function as an argument.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 0ab37474-e8d8-492c-93a7-d82d346df4e0
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+Where is the anonymous function? For the anonymous function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+The anonymous function is in the line where we invoke `doMath()`. It takes in 1 parameter named `num` that is a number
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 753caf71-804f-45fa-a9a0-f7be30d65e95
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What does the anonymous function do?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+The anonymous function squares the number (multiplies it with itself)
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 9c339dae-a3f7-4fea-9eeb-ba503bf0e77e
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+In the `doMath` function, how do we use the variable `operation`?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+Because `operation` is a function, we _invoke_ the `operation` function with `let result = operation(i);`
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 14c47632-aea6-4f5b-80ad-929396bc832f
+* title: Predict the Output
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What does running this script print out?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+your output here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+```
+0: 0
+1: 1
+2: 4
+3: 9
+4: 16
+5: 25
+6: 36
+7: 49
+8: 64
+9: 81
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
 
 ### Exercise: Create More Anonymous Math Operation Callbacks
 
