@@ -78,8 +78,8 @@ JavaScript syntax is famously very picky, even moreso than Ruby.
 - **Make flash cards**
     - Seriously! This will help you get over syntax missteps and typos even faster
     - Make flash cards for common lines of code that you'll have to write, like declaring variables, reading data structures (like arrays), making methods/functions, etc.
-    - Have a cheat sheet. Make a huge table that says how to do something, so you can start from somewhere. Have a separate table for "exceptions" or times that things break those rules
-  - **Definitions:** you'll learn more definitions, or maybe you just need a clear definition of something on hand
+- **Have a cheat sheet**. Make a huge table that says how to do something, so you can start from somewhere. Have a separate table for "exceptions" or times that things break those rules
+- **Definitions:** you'll learn more definitions, or maybe you just need a clear definition of something on hand
 
 ## Questions to Keep In Your Head
 
