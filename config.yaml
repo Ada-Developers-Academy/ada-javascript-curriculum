@@ -7,8 +7,7 @@
 
 ---
 Standards:
-  -
-    Title: Js Week 1
+  - Title: Js Week 1
     Description: Js Week 1
     UID: c98d17d95358299af09b0b276d67a3e6
     SuccessCriteria:
@@ -16,5 +15,17 @@ Standards:
     ContentFiles:
       -
         Type: Lesson
-        UID: f752396411eec3cf6287dc244b9f366d
-        Path: /01-js-week-1/introduction-to-js.md
+        UID: 348dbcad-93f3-49e3-8aeb-f314c91096ad
+        Path: /01-js-week-1/welcome-to-second-language.md
+      -
+        Type: Lesson
+        UID: 6417cc03-a1be-4e53-9886-ca4559062e3c
+        Path: /01-js-week-1/setup-linting.md
+      -
+        Type: Resource
+        UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
+        Path: /01-js-week-1/examples/eslintrc.examples.resource.md
+      - 
+        Type: Lesson
+        UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
+        Path: /01-js-week-1/js-intro.md

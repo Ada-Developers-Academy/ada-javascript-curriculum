@@ -1,9 +1,13 @@
 # Welcome to JavaScript!
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=e0095540-a43e-4800-8831-ac7d015f6d4d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
+By the end of this lesson we will be able to...
+
 - Discover the varying applications of JavaScript
-- Learn where Node and `npm` fit in all of this
+- Explain where Node and `npm` fit in all of this
 - Apply JavaScript naming conventions and comment syntax
 - Recognize the different data types in JavaScript
 - Understand that Objects are very different in JavaScript compared to Ruby
@@ -58,7 +62,7 @@ Open the `node` REPL and put in the following commands. What do you get?
 1. `typeof x;`
 1. `2 - 'Hello World!';`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -97,11 +101,11 @@ Let's learn some rules about JavaScript's syntax:
 
 Compare this to Ruby:
 
-| Ruby | JavaScript |
-| --- | ---
-| Comments are made with a line beginning with `#` | Comments are made with a line beginning with `//`
-| variables are named using snake_case | variables are named using camelCase
-| lines of code can end with `;` and it's valid, but nobody really does this | lines of code can end with `;`, and we will learn JavaScript best practices of doing this
+| Ruby                                                                       | JavaScript                                                                                |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Comments are made with a line beginning with `#`                           | Comments are made with a line beginning with `//`                                         |
+| variables are named using snake_case                                       | variables are named using camelCase                                                       |
+| lines of code can end with `;` and it's valid, but nobody really does this | lines of code can end with `;`, and we will learn JavaScript best practices of doing this |
 
 At some point, we may have more nuanced opinions about this; for now, let's go with this :)
 
@@ -158,7 +162,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `false || true;`
 1. `false || false;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -199,7 +203,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `0.1 + 0.2;`
 1. `'asdf' - 5;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -244,7 +248,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `'A triangle has ${ 2 + 1 } sides.';`
 1. `` `A triangle has ${ 2 + 1 } sides` ``
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -273,7 +277,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `['foo', ['this', 'is', 'a', 'nested', 'array'], 1, 2];`
 1. `['foo', ['this', 'is', 'a', 'nested', 'array'], 1, 2].length;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -301,7 +305,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `null == false;`
 1. `null.length;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -334,7 +338,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `['pineapple', 'cherry', 'lemon', 'apple'][0];`
 1. `['pineapple', 'cherry', 'lemon', 'apple'][999];`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -366,7 +370,8 @@ Note the following similarities between JavaScript objects and Ruby hashes:
 
 In your Node REPL, copy-and-paste these lines. Do you get what you expect?
 
-1.
+1.  Example object:
+
     ```javascript
     let testObj = {
       someNum: 5,
@@ -376,6 +381,7 @@ In your Node REPL, copy-and-paste these lines. Do you get what you expect?
       }
     };
     ```
+
 1. `testObj;`
 1. `testObj['someNum'];`
 1. `testObj.someNum;`
@@ -383,12 +389,12 @@ In your Node REPL, copy-and-paste these lines. Do you get what you expect?
 1. `testObj.someNestedObj;`
 1. `testObj.someNestedObj.someOtherNum;`
 1. `testObj['someNestedObj'].someOtherNum;`
-1. `testObj['someNestedObj']['someOtherNum'];`
+1.  `testObj['someNestedObj']['someOtherNum'];`
 1. `let key = 'someNestedObj';`
 1. `testObj[key];`
 1. `testObj.key;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -432,18 +438,183 @@ We will spend the rest of our time in JavaScript thinking about functions, so st
   - `Object`
   - `Function`
 
+
+## Learning Comprehension Questions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 86c7f107-9c0d-449c-91bf-8e7a4f25e6f3
+* title: JS Objects
+* points: 
+* topics: javascript, js-objects
+
+##### !question
+
+What is the result of this JavaScript code:
+
+```javascript
+const obj = {
+  name: 'Ada Lovelace',
+  age: 247,
+  title: 'Senior Software Engineer'
+}
+
+const field = 'name';
+obj[field]  // <-- What is the value of this
+```
+
+##### !end-question
+
+##### !options
+
+* 'Ada Lovelace'
+* 247
+* 'name'
+* undefined
+
+##### !end-options
+
+##### !answer
+
+* 'Ada Lovelace'
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can use a variable inside the square brackets [] for a JavaScript object, just like you can in a Ruby hash.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 74eeafc9-c000-4de7-afa1-7a1e0be68ade
+* title: JS Objects
+* points: 
+* topics: javascript, js-objects
+
+##### !question
+
+What is the result of this JavaScript code:
+
+```javascript
+const obj = {
+  name: 'Ada Lovelace',
+  age: 247,
+  title: 'Senior Software Engineer'
+}
+
+const field = 'name';
+obj.field  // <-- What is the value of this
+```
+
+##### !end-question
+
+##### !options
+
+* 'Ada Lovelace'
+* 247
+* 'name'
+* undefined
+
+##### !end-options
+
+##### !answer
+
+* undefined
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You **cannot** use a variable after the `.` with a JavaScript object, unlike the square brackets.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 9afd1758-fda8-4a48-bc9f-21f30a4ce393
+* title: Interpoloation
+* points: 1
+* topics: javascript, js-interpolation
+
+##### !question
+
+What is the result of the following code:
+
+```javascript
+`Two plus two is ${ 2  + 2 }`
+```
+
+##### !end-question
+
+##### !options
+
+* 'Two plus two is ${ 2  + 2 }'
+* 'Two plus two is 4'
+* null
+* undefined
+
+##### !end-options
+
+##### !answer
+
+* 'Two plus two is 4'
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can do string interpolation with backticks in JavaScript.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Summary: The Data Type Ruby vs. JavaScript Abbreviated List
 
-| Data Type | Things to note about Ruby vs. JavaScript |
-| --- | --- |
-| Boolean | -
-| Number | JavaScript has its own definitions for float math, infinity, and `NaN` (Not a Number)
-| String | We prefer making Strings with single-quotes (`''`). To do string interpolation, we need to use the syntax `${}` and backticks instead of single-quotes
-| Array | -
-| null | -
-| undefined | Will be useful when we think about variables that may have never been assigned a value
-| Object | Our base understanding will come from Ruby's hashes, but will soon evolve
-| Function | We will get into this more in-depth later
+| Data Type | Things to note about Ruby vs. JavaScript                                                                                                               |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Boolean   | -                                                                                                                                                      |
+| Number    | JavaScript has its own definitions for float math, infinity, and `NaN` (Not a Number)                                                                  |
+| String    | We prefer making Strings with single-quotes (`''`). To do string interpolation, we need to use the syntax `${}` and backticks instead of single-quotes |
+| Array     | -                                                                                                                                                      |
+| null      | -                                                                                                                                                      |
+| undefined | Will be useful when we think about variables that may have never been assigned a value                                                                 |
+| Object    | Our base understanding will come from Ruby's hashes, but will soon evolve                                                                              |
+| Function  | We will get into this more in-depth later                                                                                                              |
 
 ## Additional Resources
 
@@ -453,4 +624,3 @@ As with HTML and CSS, there are two main educational resources about JavaScript:
 - [MDN re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) - worth going over once you're comfortable with the basics
 - [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do) - wonderful (and delightfully slim) dead trees book on the language
 - [MDN Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-
