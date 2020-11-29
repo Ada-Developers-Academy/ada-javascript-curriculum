@@ -105,3 +105,9 @@ Learning a new programming language can be weird:
 - It can be easy: When concepts match, they transfer, and in programming, hopefully a lot of concepts transfer
 - It can be challenging: Things that used to make sense may not make sense anymore. You may find that something you thought you understood is actually something you don't understand. Have compassion, and use this as an opportunity to re-learn those concepts
 - As always: don't aim for perfect, deep understanding. Aim for knowing enough that you can look up what you need in the future, and trust in your own ability to research and learn.
+
+## Resources
+
+- [JavaScript in 5 Minutes](https://youtu.be/c-I5S_zTwAc) - Video
+- [FreeCodeCamp Course in JavaScript](https://youtu.be/PkZNo7MFNFg)- Video Course 3.5 hours
+- [JavaScript.info Language Resource](https://javascript.info/) - Text-based resource
