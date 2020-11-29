@@ -29,3 +29,7 @@ Standards:
         Type: Lesson
         UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
         Path: /01-js-week-1/js-intro.md
+      - 
+        Type: Lesson
+        UID: c95a8cd5-e90f-42aa-a457-e4162b4f581f
+        Path: /01-js-week-1/jfirst-class-functions.md
