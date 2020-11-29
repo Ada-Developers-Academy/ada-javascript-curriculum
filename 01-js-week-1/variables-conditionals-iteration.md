@@ -445,7 +445,7 @@ true
 <!--optional-->
 ##### !explanation
 
-The == sign tests for loose equality. 3 and "3" are not the strictly equal, but the == sign tries to convert values to a common data type *first* before comparing. Thus 3 and "3" returns **true**.
+The == sign tests for loose equality. 3 and "3" are not strictly equal, but the == sign tries to convert values to a common data type *first* before comparing. Thus 3 and "3" returns **true**.
 
 ##### !end-explanation
 
