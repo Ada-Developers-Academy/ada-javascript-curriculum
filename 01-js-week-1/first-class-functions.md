@@ -95,23 +95,92 @@ console.log(task.isComplete);
 ```
 
 #### Exercise: Write More Behavior for the `task` Object
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: local-snippet
+* language: javascript
+* id: 4aa93a1e-2313-4401-a479-6d3eeb0ad4cf
+* title: Code Challenge
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
 
 Given this base code for an object named `task`, make another method on it:
 
 1. Name the method `describe`
-1. The method should print out the text `"The task name is"` and then the task name
-1. Then it should print out the text `"The task owner is"` and then the task owner
-1. It should return `true` (Why? Just to practice returning things.)
-1. At the end of the script, call the method with `task.describe();` and verify
+2. The method should print out the text `"The task name is"` and then the task name
+3. Then it should print out the text `"The task owner is"` and then the task owner
+4. It should return `true` (Why? Just to practice returning things.)
+5. At the end of the script, call the method with `task.describe();` and verify
 
-<details>
+##### !end-question
 
-  <summary>
-    Compare your implementation with ours!
-  </summary>
+##### !placeholder
 
-  ```javascript
+```js
+ function testFunction() {
   const task = {
+    name: 'practice iteration in JavaScript',
+    dueDate: 'end of the week',
+    owner: 'simon',
+    isComplete: false,
+    markComplete() {
+      console.log('Wow...');
+      console.log(`The task "${this.name}" is complete!`);
+      console.log('Congratulations! You won!');
+      this.isComplete = true;
+      return true;
+    }
+    // your code here, then call the new method
+  }
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+
+describe('testFunction', function() {
+
+  it("may look similar to our implementation under hint!", function() {
+    const task = {
+      name: 'practice iteration in JavaScript',
+      dueDate: 'end of the week',
+      owner: 'simon',
+      isComplete: false,
+      markComplete() {
+        console.log('Wow...');
+        console.log(`The task "${this.name}" is complete!`);
+        console.log('Congratulations! You won!');
+        this.isComplete = true;
+        return true;
+      },
+      describe() {
+        console.log(`The task name is ${this.name}`);
+        console.log(`The task owner is ${this.owner}`);
+        return true;
+      }
+    }
+    task.describe();
+    
+    expect(testFunction(), "Error message").to.deep.eq(undefined)
+  })
+})
+
+```
+
+##### !end-tests
+
+<!--optional-->
+##### !hint
+``` javascript
+const task = {
     name: 'practice iteration in JavaScript',
     dueDate: 'end of the week',
     owner: 'simon',
@@ -131,10 +200,22 @@ Given this base code for an object named `task`, make another method on it:
   }
 
   task.describe();
-  ```
+```
+##### !end-hint
 
-</details>
-<br/>
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
 
 Is there bonus time? If there is, add a new member named `daysExtended` with a value of `0`. Then, add a new member that is a function named `extendDueDate`. The function `extendDueDate` takes in one parameter: a number of days to increment `daysExtended` by.
 
@@ -195,40 +276,263 @@ doMath(doubleNum);
 ```
 
 Answer the following questions:
+<!--BEGIN CHALLENGE-->
 
-1. For the `doubleNum` function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
-1. For the `doMath` function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
-1. What line _invokes_ the `doMath` function? What do we pass in as an argument? What data type is that argument?
-1. In the `doMath` function, how do we use the variable `operation`?
-1. What does running this script print out?
+### !challenge
 
-<details>
+* type: short-answer
+* id: 54f29def-b5d1-4908-a0b0-8123e39f44e6
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
 
-  <summary>
-    Check your answers here!
-  </summary>
+##### !question
 
-  1. 1 parameter named `num` that is a number
-  1. 1 parameter named `operation` that is a function
-  1. `doMath(doubleNum)`. We pass in the `doubleNum` function as an argument.
-  1. Because `operation` is a function, we _invoke_ the `operation` function with `let result = operation(i);`
-  1.
-      ```
-      0: 0
-      1: 2
-      2: 4
-      3: 6
-      4: 8
-      5: 10
-      6: 12
-      7: 14
-      8: 16
-      9: 18
-      ```
+For the `doubleNum` function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
 
-</details>
+##### !end-question
 
-<br/>
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+1 parameter named `num` that is a number
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 897b4824-f16d-42f7-b3a1-82609b7f1705
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+For the `doMath` function, how many parameters does it take in, what are the names of the parameters, and what data type are we expecting for each parameters?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+1 parameter named `operation` that is a function
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 972e4dd0-f5c8-4539-8d17-f92195421ccc
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What line _invokes_ the `doMath` function? What do we pass in as an argument? What data type is that argument?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+`doMath(doubleNum)`. We pass in the `doubleNum` function as an argument.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 5ba5c8b3-6ea5-4c3a-a3a9-fe1ba8f31c0b
+* title: Short Answer
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+In the `doMath` function, how do we use the variable `operation`?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your answer here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+Because `operation` is a function, we _invoke_ the `operation` function with `let result = operation(i);`
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 4dcc9ac6-a9b5-45b8-a277-a7e7d2efea34
+* title: Predict the Output
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What is the output of the code?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Your output here...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
+
+```
+0: 0
+1: 2
+2: 4
+3: 6
+4: 8
+5: 10
+6: 12
+7: 14
+8: 16
+9: 18
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+
 
 A function that is passed as an argument is often referred to as a _callback function_, or sometimes just a _callback_.
 
