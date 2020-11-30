@@ -1,6 +1,8 @@
 # JS Calculator
 
-In this project you will recreate your Ruby Calculator project with JavaScript.  This is due **Wednesday December 9th at 9:00am**.  Please post both a link to your github repo and a link to your pull request.
+In this project you will recreate your [Ruby Calculator project](https://github.com/ada-c14/calculator) with JavaScript.  This is due **Wednesday December 9th at 9:00am**.  Please post both a link to your github repo and a link to your pull request.
+
+Please check out the [project repository](https://github.com/ada-c14/js-calculator) for full instructions.
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
