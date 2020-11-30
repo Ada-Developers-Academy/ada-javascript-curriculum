@@ -1,6 +1,8 @@
 # JS Adagrams
 
-In this project you will recreate your Ruby Calculator project with JavaScript.  This is due **Monday December 13th at 9:00am**.  Please post both a link to your github repo and a link to your pull request.
+In this project you will recreate your [Ruby Adagrams](https://github.com/ada-c14/adagrams) project with JavaScript.  This is due **Monday December 13th at 9:00am**.  
+
+Please fork and clone the [JS Adagrams](https://github.com/ada-c14/js-adagrams) repository.  Please post both a link to your github repo and a link to your pull request.
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
