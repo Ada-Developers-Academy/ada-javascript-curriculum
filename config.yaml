@@ -33,3 +33,11 @@ Standards:
         Type: Lesson
         UID: e655b165-aeca-49a5-8084-2f2dda7f9a14
         Path: /01-js-week-1/js-calculator.md
+      - 
+        Type: Lesson
+        UID: 14d14768-4767-48c1-bf20-88fd3e2bfb3b
+        Path: /01-js-week-1/functions-worksheet.md
+      - 
+        Type: Lesson
+        UID: 49699f80-f8a7-42ee-a219-db847433ff4f
+        Path: /01-js-week-1/anonymous-and-foreach-loops.md
