@@ -41,3 +41,7 @@ Standards:
         Type: Lesson
         UID: 49699f80-f8a7-42ee-a219-db847433ff4f
         Path: /01-js-week-1/anonymous-and-foreach-loops.md
+      -
+        Type: Checkpoint
+        UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
+        Path: /01-js-week-1/js-adagrams.checkpoint.md
