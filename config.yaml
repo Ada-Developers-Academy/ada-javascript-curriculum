@@ -29,6 +29,10 @@ Standards:
         Type: Lesson
         UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
         Path: /01-js-week-1/js-intro.md
+      -
+        Type: Lesson
+        UID: e655b165-aeca-49a5-8084-2f2dda7f9a14
+        Path: /01-js-week-1/js-calculator.md
       - 
         Type: Lesson
         UID: 14d14768-4767-48c1-bf20-88fd3e2bfb3b
