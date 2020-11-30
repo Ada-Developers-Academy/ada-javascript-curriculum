@@ -29,3 +29,7 @@ Standards:
         Type: Lesson
         UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
         Path: /01-js-week-1/js-intro.md
+      - 
+        Type: Lesson
+        UID: 49699f80-f8a7-42ee-a219-db847433ff4f
+        Path: /01-js-week-1/anonymous-and-foreach-loops.md
