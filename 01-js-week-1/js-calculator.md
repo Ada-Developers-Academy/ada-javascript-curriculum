@@ -45,9 +45,9 @@ Link to your github repo
 
 * type: short-answer
 * id: 89b7824c-cfe9-431b-a0ea-52d6905acc0f
-* title: Videostore API Project
+* title: JS Calculator PR
 * points: 3
-* topics: rails
+* topics: javascript
 
 ##### !question
 
