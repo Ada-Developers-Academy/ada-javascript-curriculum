@@ -187,15 +187,23 @@ describe('testFunction', () => {
     console.log = oldConsoleLog;
   });
 
-
-  it('may look similar to our implementation under hint!', () => {
+  it('calls task.describe appropriately', () =>{
     const task = testFunction();
 
     expect(console.log.mock.calls.length).to.equal(2);
+  });
 
+  it('returns true', () => {
+    const task = testFunction();
 
     const answer = task.describe();
     expect(answer).to.be.equal(true);
+  });
+
+  it('prints the strings requested, capitalization and spaces correct', () => {
+    const task = testFunction();
+
+    const answer = task.describe();
 
     // The testFunction calls Describe (2 logs) and I call it
     expect(console.log.mock.calls.length).to.equal(4);
