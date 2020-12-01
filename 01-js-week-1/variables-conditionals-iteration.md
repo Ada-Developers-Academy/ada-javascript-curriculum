@@ -456,7 +456,7 @@ The == sign tests for loose equality. 3 and "3" are not strictly equal, but the 
 
 ### !challenge
 
-* type: short-answer
+* type: multiple-choice
 * id: c629737a-1172-4c73-8044-efc01614970d
 * title: Code Conversion
 <!--Other optional fields (checkpoints only) -->
@@ -465,29 +465,35 @@ The == sign tests for loose equality. 3 and "3" are not strictly equal, but the 
 
 ##### !question
 
-Solve the following problem with a ternary operator: 
-If the variable `input` is of data type string, return `true`; otherwise, return `false`.
+Select the correct answer to the following prompt:
+
+Using the ternary operator, return `true` if the variable `input` is of data type string; otherwise, return `false`.
 
 ##### !end-question
 
+##### !options
+
+* `(typeof input == "string" ? false : true`
+* `(typeof input === "string" ? true : false`
+* `(typeof input == "string" ? true : false`
+
+##### !end-options
+
 ##### !answer
 
-```javascript
-(typeof input === "string" ? true : false)
-```
+* `(typeof input === "string" ? true : false`
 
 ##### !end-answer
 
-##### !placeholder
-
-write your ternary operator here...
-
-##### !end-placeholder
-
-<!--optional-->
 ##### !hint
 
-Make sure you are using strict equality and spacing appropriately.
+Make sure you are using strict equality.
+
+##### !end-hint
+
+##### !hint
+
+If we look at `A ? B : C`, B is the result when `A == true`.
 
 ##### !end-hint
 
