@@ -76,7 +76,14 @@ const simonsFavGame = 'night in the woods';
 
 `var` and `let` declare variables that can be re-assigned. `var` and `let` mean subtly different things, both having to do with [scope](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable) which we'll get to later.  **A good rule of thumb and our best practice moving forward is to always use `let` for variables we expect to be re-assigned.**
 
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-warning
+
+## Avoid Using `var`
+
 `var` was the normal keyword to use in older versions of JavaScript. It may make sense to use `var` if you are working with an older version of the JavaScript interpreter. You may also see `var` when looking at old Stack Overflow posts.
+
+### !end-callout
 
 ### We Prefer `const` for All Other Variables
 
@@ -406,7 +413,7 @@ reference error
 <!--`topics: python, pandas`: the topics for analyzing points-->
 
 ##### !question
-What is the output of the following code:
+What is the output of the following `for` loop:
 ``` javascript
 const temp = "3";
 for(let i = 0; i <= 10; i++) {
