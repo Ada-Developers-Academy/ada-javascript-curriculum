@@ -137,6 +137,7 @@ Given this base code for an object named `task`, make another method on it:
     }
     // your code here, then call the new method
   }
+  return task;
 }
 ```
 
