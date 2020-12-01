@@ -146,32 +146,62 @@ Given this base code for an object named `task`, make another method on it:
 
 ```js
 
-describe('testFunction', function() {
+/**
+ * Blatantly stolen from Jest (I hate mocha/chai with an irrational passion).
+ * 
+ * This basically lets me mock a function (console.log) so I can see what they printed
+ * and how many times they did so.
+ * 
+ * @param impl - What the real function is supposed to do.
+ */
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
 
-  it("may look similar to our implementation under hint!", function() {
-    const task = {
-      name: 'practice iteration in JavaScript',
-      dueDate: 'end of the week',
-      owner: 'simon',
-      isComplete: false,
-      markComplete() {
-        console.log('Wow...');
-        console.log(`The task "${this.name}" is complete!`);
-        console.log('Congratulations! You won!');
-        this.isComplete = true;
-        return true;
-      },
-      describe() {
-        console.log(`The task name is ${this.name}`);
-        console.log(`The task owner is ${this.owner}`);
-        return true;
-      }
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
     }
-    task.describe();
-    
-    expect(testFunction(), "Error message").to.deep.eq(undefined)
-  })
-})
+  }
+
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('testFunction', () => {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+
+  it('may look similar to our implementation under hint!', () => {
+    const task = testFunction();
+
+    expect(console.log.mock.calls.length).to.equal(2);
+
+
+    const answer = task.describe();
+    expect(answer).to.be.equal(true);
+
+    // The testFunction calls Describe (2 logs) and I call it
+    expect(console.log.mock.calls.length).to.equal(4);
+    expect(console.log.mock.calls[0][0]).to.equal(`The task name is ${ task.name }`);
+    expect(console.log.mock.calls[1][0]).to.equal(`The task owner is ${ task.owner }`);
+  });
+});
 
 ```
 
