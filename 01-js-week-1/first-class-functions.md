@@ -563,7 +563,6 @@ Your output here...
 
 <!--END CHALLENGE-->
 
-
 A function that is passed as an argument is often referred to as a _callback function_, or sometimes just a _callback_.
 
 In this case, we can colloquially refer to the variable `operation` as a callback function.
@@ -571,5 +570,6 @@ In this case, we can colloquially refer to the variable `operation` as a callbac
 ## Summary
 
 Objects can have functions in them. Within an object, we can reference other members of the object with `this`. `this` will end up being a very complex subject; for now, our one use of `this` will be in this context!
+
 
 A programming language that allows you to pass functions around like this is said to support _higher order_ or _first-class_ functions. C, JavaScript and Python are examples of languages that support first-class functions; Ruby and Java are examples of languages that do not.
