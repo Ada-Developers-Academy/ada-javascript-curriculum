@@ -134,6 +134,8 @@ Note that we reference a parameter of the outer function. Parameters are a speci
 ![closure diagram](./images/closure-diagram.png)
 <!-- https://www.draw.io/#G18RoR2FDhey0XMYD5GLZinnug9p2ksL2u -->
 
+## Closures Under the Hood
+
 <details>
 <summary>Curious about how closures work under the hood?  Click here for more!</summary>
 
