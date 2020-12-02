@@ -1,5 +1,7 @@
 # Anonymous Functions and `forEach` Loops
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d02f2866-7fac-42c7-bc49-ac850111fd2b&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Explore that functions can be defined and used inline, in a pattern we call _anonymous functions_
