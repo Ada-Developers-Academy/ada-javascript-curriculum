@@ -19,6 +19,10 @@ Standards:
         Path: /01-js-week-1/setup-linting.md      
       -
         Type: Lesson
+        UID: edc83d0b-ad22-4af0-b699-7cd91c348217
+        Path: /01-js-week-1/ruby-to-js-worksheet.md
+      -
+        Type: Lesson
         UID: 348dbcad-93f3-49e3-8aeb-f314c91096ad
         Path: /01-js-week-1/welcome-to-second-language.md
       - 
