@@ -41,8 +41,7 @@ To create a closure in JavaScript, you need to do three things:
 1. Nest a function inside a function
 1. Reference a variable from the outer function in the inner function
 1. Make the inner function available outside the outer function
-    - Usually this means you return the inner function from the outer function
-    - We'll see other ways to do this later
+    - There are multiple ways to do this, but a common way is to return an inner function from an outer function, and that is what we will focus on in this lesson.
 
 ```javascript
 // Here is the outer function
@@ -70,7 +69,10 @@ incrementer(); // This is call number 2
 incrementer(); // This is call number 3
 ```
 
-**Question:** On the line `return callCountingFunction`, what would happen if we added parentheses, like `return callCountingFunction()`?
+<details>
+<summary>**Question:** On the line `return callCountingFunction`, what would happen if we changed the the line by added parentheses, to `return callCountingFunction()`?</summary>
+Instead of returning the function `callCountingFunction`, the line would call `callCountingFunction` (which will add 1 to `callCount` and print 'This is call number 1' to the console).  The function `callCountingFunction` does not have a return value, so it will return _`undefined`_, which will then be returned by `buildIncrementer`.  Calling `incrementer()` will throw a `TypeError`, because `incrementer` is equal to _`undefined`_, which is not a function.
+</details>
 
 ### Multiple Closures
 
@@ -132,13 +134,21 @@ Note that we reference a parameter of the outer function. Parameters are a speci
 ![closure diagram](./images/closure-diagram.png)
 <!-- https://www.draw.io/#G18RoR2FDhey0XMYD5GLZinnug9p2ksL2u -->
 
+<details>
+<summary>Curious about how closures work under the hood?  Click here for more!</summary>
+
+Closures are incredibly powerful but they can also be confusing.  Here's a high level overview of how they work.  Normally, when a function is executed, the context for the function is placed on the stack (things like local variables, parameters, etc).  When the function exits, a return value may be returned and then all of the local vars for a function are popped off the stack and discarded.  Any local vars that existed inside the function are gone.  
+
+Closures fundamentally changes this system.  Let's say function `awesomeFunction` has a local variable `bestVarEver` and creates function `bestFunction` that uses `bestVarEver` and then function `awesomeFunction` returns `bestFunction`.  JavaScript will take a look at `bestFunction` and notice that it uses a local variable from `awesomeFunction` and _keep `awesomeFunction` on the stack_.  `awesomeFunction` is no longer running, but the execution context that holds all of the local variables will continue to exist as long as something (in this case `bestFunction`) is still using it.
+</details>
+
 ## Exercise: Reading Closures
 
 Take a look at the following code snippet:
 
 - [Adder](https://repl.it/@adadev/Closures-Example-Adder)
 
-With your neighbors, walk through the code and be able to identify in each example:
+Walk through the code and identify:
 1. Where is the closure?
 1. What does the code do?
 1. How does the closure take advantage of the outer function's variables?
@@ -151,8 +161,6 @@ With your neighbors, walk through the code and be able to identify in each examp
     1. Create a function within a function
     1. In the inner function, reference a local variable from the outer function
     1. Make the inner function available outside the outer function
-        - Return it
-        - Register it as a callback
 - Closures are a very useful tool when defining behavior for repeated UI elements
 
 ## Additional Resources
