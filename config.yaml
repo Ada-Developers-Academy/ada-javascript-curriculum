@@ -15,41 +15,40 @@ Standards:
     ContentFiles:
       -
         Type: Lesson
-        UID: ead12e11-67b9-43c1-b3f2-dd0355c63e47
-        Path: /01-js-week-1/variables-conditionals-iteration.md
+        UID: 6417cc03-a1be-4e53-9886-ca4559062e3c
+        Path: /01-js-week-1/setup-linting.md      
       -
         Type: Lesson
         UID: 348dbcad-93f3-49e3-8aeb-f314c91096ad
         Path: /01-js-week-1/welcome-to-second-language.md
-      -
-        Type: Lesson
-        UID: 6417cc03-a1be-4e53-9886-ca4559062e3c
-        Path: /01-js-week-1/setup-linting.md
-      -
-        Type: Resource
-        UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
-        Path: /01-js-week-1/examples/eslintrc.examples.resource.md
       - 
         Type: Lesson
         UID: 2a04d88b-f4c9-41eb-be33-6ed68350f222
         Path: /01-js-week-1/js-intro.md
+      -
+        Type: Lesson
+        UID: ead12e11-67b9-43c1-b3f2-dd0355c63e47
+        Path: /01-js-week-1/variables-conditionals-iteration.md
       - 
         Type: Lesson
         UID: c95a8cd5-e90f-42aa-a457-e4162b4f581f
         Path: /01-js-week-1/first-class-functions.md
-
-      -
-        Type: Lesson
-        UID: e655b165-aeca-49a5-8084-2f2dda7f9a14
-        Path: /01-js-week-1/js-calculator.md
-      - 
-        Type: Lesson
-        UID: 14d14768-4767-48c1-bf20-88fd3e2bfb3b
-        Path: /01-js-week-1/functions-worksheet.md
       - 
         Type: Lesson
         UID: 49699f80-f8a7-42ee-a219-db847433ff4f
         Path: /01-js-week-1/anonymous-and-foreach-loops.md
+      - 
+        Type: Lesson
+        UID: 14d14768-4767-48c1-bf20-88fd3e2bfb3b
+        Path: /01-js-week-1/functions-worksheet.md        
+      -
+        Type: Lesson
+        UID: e655b165-aeca-49a5-8084-2f2dda7f9a14
+        Path: /01-js-week-1/js-calculator.md        
+      -
+        Type: Resource
+        UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
+        Path: /01-js-week-1/examples/eslintrc.examples.resource.md
       -
         Type: Checkpoint
         UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
