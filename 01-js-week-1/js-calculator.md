@@ -1,5 +1,7 @@
 # JS Calculator
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a862b810-5bd8-415b-8353-ac850048b08e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 In this project you will recreate your [Ruby Calculator project](https://github.com/ada-c14/calculator) with JavaScript.  This is due **Wednesday December 9th at 9:00am**.  Please post both a link to your github repo and a link to your pull request.
 
 Please check out the [project repository](https://github.com/ada-c14/js-calculator) for full instructions.
