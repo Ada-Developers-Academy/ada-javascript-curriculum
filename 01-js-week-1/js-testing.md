@@ -28,10 +28,10 @@ Jest tests are run from the command line using `npm test` (more on this later). 
 
 ### Setup
 
-We will install the Jest Command-line Interface globally.  This will allow us to run our tests from the terminal similar to how we tested in Ruby.  To install the Jest CLI execute the command:
+To add jest to a node project you can add it to your development dependencies (you don't need the test suite when you deploy the app) with:
 
 ```bash
-$ npm install -g jest-cli
+npm install --save-dev jest
 ```
 
 ### Exercise
@@ -126,7 +126,7 @@ to:
     test.skip('isPangram() is defined', () => {
 ```
 
-## Exercise With A Neighbor
+## Individual Exercise
 
 Read through the couple of implemented tests in `is_pangram.test.js` and the stubbed out tests.
 
