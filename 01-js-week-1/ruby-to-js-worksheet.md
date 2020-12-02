@@ -69,7 +69,7 @@ function fn (impl = () => { }) {
   return mockFn;
 }
 
-describe('ageChecker', function() {
+describe('ageChecker', () => {
   let oldConsoleLog = console.log;
   
   // Mock console.log
@@ -86,17 +86,17 @@ describe('ageChecker', function() {
     ageChecker(35);
     expect(console.log.mock.calls.length).to.equal(1);
     expect(console.log.mock.calls[0][0]).to.equal("Ada is younger");
-  })
+  });
   it("Prints correctly for younger person (person_age = 0)", () => {
     ageChecker(0);
     expect(console.log.mock.calls.length).to.equal(1);
     expect(console.log.mock.calls[0][0]).to.equal("This person is younger");
-  })
+  });
   it("Prints correctly for same age person (person_age = 2)", () => {
     ageChecker(2);
     expect(console.log.mock.calls.length).to.equal(1);
     expect(console.log.mock.calls[0][0]).to.equal("They’re the same!");
-  })
+  });
 })
 ```
 
