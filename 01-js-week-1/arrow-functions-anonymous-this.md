@@ -148,8 +148,6 @@ Refactor the following to use an Arrow function.  It already passes the tests, b
 
 
 ```js
-// notes on what to return, etc
-
 function getLengths(words) {
   return words.map(function (word) {
     return word.length;
