@@ -46,6 +46,10 @@ Standards:
         UID: e655b165-aeca-49a5-8084-2f2dda7f9a14
         Path: /01-js-week-1/js-calculator.md        
       -
+        Type: Lesson
+        UID: 58b6fb48-4f6a-42d4-977e-31622958bd8b
+        Path: /01-js-week1/classes.md
+      -
         Type: Resource
         UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
         Path: /01-js-week-1/examples/eslintrc.examples.resource.md
