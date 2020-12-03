@@ -124,6 +124,164 @@ let fido = new Dog('Fido', 3); // <-- TypeError!
 ```
 
 **Answer:** `this!` We know that arrow functions take the value of this from the context in which they are defined. Since our constructor is defined outside any other object, `this` doesn't make any sense, and our code does the wrong thing.  Further, arrow functions do not have a **prototype** attribute, so `Dog.prototype` will generate an error.
+## Learning Comprehension
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 46a96161-fcfe-4b64-9c5c-f32f37613188
+* title: Converting an anonymous callback to an anonymous arrow function
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, arrow-functions
+
+##### !question
+
+Refactor the following to use an Arrow function.  It already passes the tests, but make it do so using an arrow function.
+
+##### !end-question
+
+##### !placeholder
+
+
+```js
+function getLengths(words) {
+  return words.map(function (word) {
+    return word.length;
+  });
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+describe('getLengths', () => {
+
+  it("returns [3, 4, 5] for ['bob', 'jane', 'alice']", () => {
+    // Act
+    const answer = getLengths(['bob', 'jane', 'alice']);
+    expect(answer, "must be an array").to.be.an('array');
+    expect(answer, 'must equal [3, 4, 5]').deep.to.equal([3, 4, 5]);
+  });
+
+  it('returns [] for []', () => {
+    const answer = getLengths([]);
+    expect(answer, "must be an array").to.be.an('array');
+    expect(answer, 'must equal []').deep.to.equal([]);
+  });
+
+  it('returns [3] for [\'ada\']', () => {
+    const answer = getLengths(['ada']);
+    expect(answer, "must be an array").to.be.an('array');
+    expect(answer, 'must equal [3]').deep.to.equal([3]);
+  });
+})
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 102fc788-8783-4096-8f58-90cfa2bfda80
+* title: Differences between normal and arrow functions
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, arrow-functions
+
+##### !question
+
+The difference between arrow functions and normal functions is that...
+
+##### !end-question
+
+##### !options
+
+* **Only** arrow functions have a `this` keyword.
+* Arrow functions do **not** have a `this` context.
+* Arrow functions **cannot** take parameters.
+* Arrow functions **cannot** return a value.
+
+##### !end-options
+
+##### !answer
+
+* Arrow functions do **not** have a `this` context.
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+**Arrow functions do not have their own `this` context**, instead they inherit `this` from the surrounding block.  So using an arrow function makes the resulting code less confusing and error-prone.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 3c48887b-7c34-40b7-be13-9e0b36a28b5b
+* title: Good place to use an arrow function
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, arrow-functions
+
+##### !question
+
+What is a good place to use an arrow function?
+
+##### !end-question
+
+##### !options
+
+* As a member method of an object
+* As a constructor
+* As a callback function
+
+##### !end-options
+
+##### !answer
+
+* As a callback function
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because an arrow function takes it's `this` from the block within which it's defined, it doesn't make a good choice for a member method of an object or a constructor.  Instead it's most useful as a callback function.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Summary
 
