@@ -97,19 +97,40 @@ describe('ageChecker', () => {
     expect(console.log.mock.calls.length).to.equal(1);
     expect(console.log.mock.calls[0][0]).to.equal("They’re the same!");
   });
-})
+});
 ```
 
 ##### !end-tests
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+##### !hint
+Make sure that your code uses the correct capitalization and punctuation! 
+##### !end-hint
+##### !hint
+We are going to be providing a variable called `personAge` by calling the function! Don't edit this variable!
+##### !end-hint
+##### !hint
+Copy the text of your code, and then hit the button to reset the window! You might have deleted something important.
+##### !end-hint  
+##### !hint
+Here is our solution!
+```javascript
+const adaAge = 2
 
+if (personAge < adaAge) {
+  console.log("This person is younger")
+}
+else if (adaAge < personAge) {
+  console.log("Ada is younger")
+}
+else {
+  console.log("They’re the same!")
+}
+``` 
+##### !end-hint
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
+<!--
 
     <details>
     <summary>
@@ -132,6 +153,7 @@ describe('ageChecker', () => {
     ```
 
     </details>
+-->
 
 1. Ruby
     ```ruby
