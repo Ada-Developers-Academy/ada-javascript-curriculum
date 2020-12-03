@@ -217,7 +217,7 @@ describe('Animal class', function() {
   it("can be instantiated with new Animal('oink') and have an instance variable sound", () =>  {
     const animal = new Animal('oink');
 
-    expect(animal.sound, 'new animal has a sound property').not.toBeUndefined();
+    expect(animal.sound, 'new animal has a sound property').not.to.be(undefined);
     expect(animal.sound, 'newAnimal.sound equals "oink"').toEqual('oink');
   });
 })
