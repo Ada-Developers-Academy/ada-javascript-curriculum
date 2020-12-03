@@ -124,7 +124,6 @@ Given this base code for an object named `task`, make another method on it:
 ##### !placeholder
 
 ```js
- function testFunction() {
   const task = {
     name: 'practice iteration in JavaScript',
     dueDate: 'end of the week',
@@ -136,11 +135,9 @@ Given this base code for an object named `task`, make another method on it:
       console.log('Congratulations! You won!');
       this.isComplete = true;
       return true;
-    }
+    },
     // your code here, then call the new method
   }
-  return task;
-}
 ```
 
 ##### !end-placeholder
@@ -176,7 +173,7 @@ function fn (impl = () => { }) {
   return mockFn;
 }
 
-describe('testFunction', () => {
+describe('describe', () => {
   let oldConsoleLog = console.log;
 
   // Mock console.log
@@ -189,26 +186,14 @@ describe('testFunction', () => {
     console.log = oldConsoleLog;
   });
 
-  it('calls task.describe appropriately', () =>{
-    const task = testFunction();
-
-    expect(console.log.mock.calls.length).to.equal(2);
-  });
-
   it('returns true', () => {
-    const task = testFunction();
-
     const answer = task.describe();
     expect(answer).to.be.equal(true);
   });
 
   it('prints the strings requested, capitalization and spaces correct', () => {
-    const task = testFunction();
-
     const answer = task.describe();
 
-    // The testFunction calls Describe (2 logs) and I call it
-    expect(console.log.mock.calls.length).to.equal(4);
     expect(console.log.mock.calls[0][0]).to.equal(`The task name is ${ task.name }`);
     expect(console.log.mock.calls[1][0]).to.equal(`The task owner is ${ task.owner }`);
   });
