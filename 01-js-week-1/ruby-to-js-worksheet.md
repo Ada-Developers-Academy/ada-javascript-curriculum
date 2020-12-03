@@ -165,7 +165,6 @@ end
 
 ##### !placeholder
 
-[the code below is the starting code in the web editor]
 ```js
 function comparisonPractice(x,y) { //Don't delete this
 
@@ -234,50 +233,21 @@ Remember, don't assign `x` or `y`!
 ##### !end-hint
 ##### !hint
 ```javascript
-    let x = 7
-    let y = 7
-
-    if (x > y || x === y) {
-      if (x > y) {
-        console.log("x is bigger")
-      }
-      else {
-        console.log("x = y")
-      }
-    }
-    else {
-      console.log("y is bigger")
-    }
+if (x > y || x === y) {
+if (x > y) {
+  console.log("x is bigger")
+}
+else {
+  console.log("x = y")
+}
+}
+else {
+  console.log("y is bigger")
+}
 ```
 ##### !end-hint
 
 ### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-    <details>
-    <summary>
-    Javascript
-    </summary>
-
-    ```javascript
-    let x = 7
-    let y = 7
-
-    if (x > y || x === y) {
-      if (x > y) {
-        console.log("x is bigger")
-      }
-      else {
-        console.log("x = y")
-      }
-    }
-    else {
-      console.log("y is bigger")
-    }
-    ```
-
-    </details>
-
 
 1. Ruby
     ```ruby
