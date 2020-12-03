@@ -161,7 +161,6 @@ function getLengths(words) {
 
 ##### !tests
 
-[the mocha tests below will run against the student submission]
 ```js
 describe('getLengths', () => {
 
