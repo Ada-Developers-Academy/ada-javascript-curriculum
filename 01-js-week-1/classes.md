@@ -142,23 +142,9 @@ When you create a new `Zine` instance, the `initialize` method runs and sets the
 
 Below is this `Zine` class written in JavaScript.  It has `title` and `contributor` attributes set in the `constructor` method and a `toString` method which outputs the object as a String.  Notice that everything in a class falls between the curly braces **without any commas to separate each item.**
 
-```javascript
-class Zine {
-  constructor(title, contributor) {
-    this.title = title;
-    this.contributor = contributor;
-  }
+<!-- trying how a repl.it iframe works -->
 
-  toString() {
-    return `${this.title} by ${this.contributor}`;
-  }
-}
-
-const zine = new Zine('So you want to be a wizard', 'Julia Evans');
-
-console.log(zine.toString());
-// So you want to be a wizard by Julia Evans
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ChrisMcAnally/AdaClass1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Classes can also be declared as an expression:
 
@@ -190,7 +176,73 @@ const wizardZine = new Zine('So you want to be a wizard', 'Evans');
 > Constructor Ran!
 ```
 
-**Exercise**:  With a fellow classmate create an `Animal` class similar to `Zine` above.  The `constructor` should take a `sound` parameter and save it in an instance variable.  Then create an instance of the class.  Verify that it works.
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 3adaa8df-adcf-4c78-88f4-d94e9f66310e
+* title: Creating a class
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, js-classes
+
+##### !question
+
+Create an `Animal` class similar to `Zine` above.  The `constructor` should take a `sound` parameter and save it in an instance variable.  Then create an instance of the class.  Verify that it works.
+
+##### !end-question
+
+##### !placeholder
+
+```js
+
+```
+
+##### !end-placeholder
+
+##### !tests
+
+
+```js
+describe('Animal class', function() {
+
+  it("can be instantiated with new Animal('oink');", () =>  {
+    const animal = new Animal('oink');
+
+    expect(animal).not.toBeUndefined();
+  });
+
+  it("can be instantiated with new Animal('oink') and have an instance variable sound", () =>  {
+    const animal = new Animal('oink');
+
+    expect(animal.sound, 'new animal has a sound property').not.toBeUndefined();
+    expect(animal.sound, 'newAnimal.sound equals "oink"').toEqual('oink');
+  });
+})
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+```javascript
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+}
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Instance Methods
 
