@@ -214,7 +214,7 @@ describe('testFunction', () => {
   });
 });
 
-```
+  ```
 
 ##### !end-tests
 
@@ -262,7 +262,7 @@ Is there bonus time? If there is, add a new member named `daysExtended` with a v
 
 #### Notable Things About Syntax
 
-<details>
+   style="max-width: 700px; margin: auto;">
 
   <summary>
     As with much of JavaScript, there's two versions of the syntax to define a function inside an object. Click here to expand and view the old (pre-2015) syntax.
