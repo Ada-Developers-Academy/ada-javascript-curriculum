@@ -227,11 +227,21 @@ describe('Animal class', function() {
 ##### !end-tests
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+##### !hint
+
+```js
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+}
+```
+
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
-```javascript
+```js
 class Animal {
   constructor(sound) {
     this.sound = sound;
@@ -270,7 +280,99 @@ console.log(wizardZine.totalPrice());
 > 1.08
 ```
 
-**Exercise**:  For our `Animal` class, create a `speak` method which will print the sound to the console.  Try it out to verify that the method is working.
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 2eaceaf9-025d-4653-9107-da96cdfae070
+* title: Instance Methods
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, js-classes
+
+##### !question
+
+For our `Animal` class, create a `speak` method which will print the sound to the console.  Try it out to verify that the method is working.
+
+##### !end-question
+
+##### !placeholder
+
+```js
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+/**
+ * Blatantly stolen from Jest because I don't know how to mock functions in Mocha.
+ * 
+ * This basically lets me mock a function (console.log) so I can see what they printed
+ * and how many times they did so.
+ * 
+ * @param impl - What the real function is supposed to do.
+ */
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
+    }
+  }
+
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('Animal Speak', function() {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("will make (new Animal('woof')).speak() print 'woof' to console", () => {
+    const animal = new Animal('woof');
+
+    animal.speak();
+
+    expect(console.log.mock.calls[0][0]).to.equal('woof');
+  });
+});
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Static Methods
 
