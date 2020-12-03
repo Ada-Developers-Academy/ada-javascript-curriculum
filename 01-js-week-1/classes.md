@@ -212,7 +212,7 @@ describe('Animal class', function() {
     const animal = new Animal('woof');
 
     expect(animal).to.not.be.an('undefined');
-    expect(animal).to.be.an('Object');
+    expect(animal).to.be.an.instanceof(Animal);
   });
 
   it("can be instantiated with new Animal('oink') and have an instance variable sound", () =>  {
