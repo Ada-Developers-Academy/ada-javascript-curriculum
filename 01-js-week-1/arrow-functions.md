@@ -60,13 +60,62 @@ Wow that's a lot less code.
 
 ### Exercise
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 8bc814e3-e84a-4329-9582-6f1546e504ef
+* title: Your First Arrow Function
+points: 1
+topics: javascript, js-arrow-functions
+
+##### !question
+
 Convert this into an arrow function and minimize the code typed.
 
-```javascript
+##### !end-question
+
+##### !placeholder
+
+```js
 const hello = function() {
   return 'hello world';
 };
 ```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+describe('hello', function() {
+
+  it("still says hello", function() {
+    expect(hello()).to.eq('hello world')
+  })
+})
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+
+If you're feeling clever, you may notice the tests will pass if you don't change anything because the tests have no way to verify whether the function is an arrow function. 
+Please still do the practice of changing it to an arrow function :p
+
+##### !end-explanation 
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+
 
 ## Syntax with Parameters
 
