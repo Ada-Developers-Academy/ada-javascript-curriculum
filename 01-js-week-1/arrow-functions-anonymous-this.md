@@ -134,7 +134,7 @@ let fido = new Dog('Fido', 3); // <-- TypeError!
 * type: code-snippet
 * language: javascript
 * id: 46a96161-fcfe-4b64-9c5c-f32f37613188
-* title: [text, a short question title]
+* title: Converting an anonymous callback to an anonymous arrow function
 <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
 * topics: javascript, arrow-functions
 
@@ -168,19 +168,19 @@ describe('getLengths', () => {
     // Act
     const answer = getLengths(['bob', 'jane', 'alice']);
     expect(answer, "must be an array").to.be.an('array');
-    expect(answer, 'must equal [3, 4, 5]').to.equal([3, 4, 5]);
+    expect(answer, 'must equal [3, 4, 5]').deep.to.equal([3, 4, 5]);
   });
 
   it('returns [] for []', () => {
     const answer = getLengths([]);
     expect(answer, "must be an array").to.be.an('array');
-    expect(answer, 'must equal []').to.equal([]);
+    expect(answer, 'must equal []').deep.to.equal([]);
   });
 
   it('returns [3] for [\'ada\']', () => {
     const answer = getLengths(['ada']);
     expect(answer, "must be an array").to.be.an('array');
-    expect(answer, 'must equal [3]').to.equal([3]);
+    expect(answer, 'must equal [3]').deep.to.equal([3]);
   });
 })
 ```
