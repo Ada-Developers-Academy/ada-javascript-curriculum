@@ -130,46 +130,130 @@ else {
 ##### !end-hint
 ### !end-challenge
 
-<!--
+1. Ruby
 
-    <details>
-    <summary>
-    Javascript
-    </summary>
 
-    ```javascript
-    const adaAge = 2
-    let personAge = 35
+    <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-    if (personAge < adaAge) {
-      console.log("This person is younger")
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 5f521652-b4e5-456a-a437-12c9717fb7e0
+* title: Problem 2
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+Convert the following ruby code to javascript
+
+```ruby
+if x > y || x == y
+    if x > y
+      print "x is bigger"
+    else
+      print "x = y"
+    end
+else
+    print "y is bigger"
+end
+```
+
+##### !end-question
+
+##### !placeholder
+
+[the code below is the starting code in the web editor]
+```js
+function comparisonPractice(x,y) { //Don't delete this
+
+}//don't delete this either
+```
+
+##### !end-placeholder
+
+##### !tests
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
     }
-    else if (adaAge < personAge) {
-      console.log("Ada is younger")
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('comparisonPractice', function() {
+
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("Prints correctly x > y", () => {
+    comparisonPractice(7,6);
+    expect(console.log.mock.calls.length).to.equal(1);
+    expect(console.log.mock.calls[0][0]).to.equal("x is bigger");
+  });
+  it("Prints correctly for x is equal to y", () => {
+    comparisonPractice(7,7);
+    expect(console.log.mock.calls.length).to.equal(1);
+    expect(console.log.mock.calls[0][0]).to.equal("x = y");
+  });
+  it("Prints correctly for x < y", () => {
+    comparisonPractice(2,7);
+    expect(console.log.mock.calls.length).to.equal(1);
+    expect(console.log.mock.calls[0][0]).to.equal("y is bigger");
+  });
+})
+```
+
+##### !end-tests
+##### !hint
+Make sure you are using the right version of equivalence! 
+##### !end-hint
+##### !hint
+Remember, don't assign `x` or `y`!
+##### !end-hint
+##### !hint
+```javascript
+    let x = 7
+    let y = 7
+
+    if (x > y || x === y) {
+      if (x > y) {
+        console.log("x is bigger")
+      }
+      else {
+        console.log("x = y")
+      }
     }
     else {
-      console.log("They’re the same!")
+      console.log("y is bigger")
     }
-    ```
+```
+##### !end-hint
 
-    </details>
--->
+### !end-challenge
 
-1. Ruby
-    ```ruby
-    x = 7
-    y = 7
-
-    if x > y || x == y
-       if x > y
-          print "x is bigger"
-       else
-          print "x = y"
-       end
-    else
-       print "y is bigger"
-    end
-    ```
+<!-- ======================= END CHALLENGE ======================= -->
     <details>
     <summary>
     Javascript
@@ -193,6 +277,7 @@ else {
     ```
 
     </details>
+
 
 1. Ruby
     ```ruby
