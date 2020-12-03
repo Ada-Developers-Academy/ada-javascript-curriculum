@@ -366,9 +366,37 @@ describe('Animal Speak', function() {
 ##### !end-tests
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+##### !hint
+
+```javascript
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+  
+  speak() {
+      console.log(this.sound);
+  }
+}
+```
+
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+##### !explanation
+
+```javascript
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+  
+  speak() {
+      console.log(this.sound);
+  }
+}
+```
+
+##### !end-explanation
 
 ### !end-challenge
 
@@ -448,6 +476,7 @@ In the example above we can use the `super` keyword to access the parent class' 
 ## Summary
 
 In this lesson we have seen:
+
 - How to use classes to create object instances
 - How to use a constructor to set up a new object in proper state
 - Create static methods using the `static` keyword
