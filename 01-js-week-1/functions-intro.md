@@ -154,7 +154,7 @@ describe('testFunction', () => {
     console.log = oldConsoleLog;
   });
 
-  it('prints the strings requested, capitalization and spaces correct', () => {
+  it('ribbit() prints "Ribbit!" and oink() prints "Oink!"', () => {
     ribbit();
     oink();
 
