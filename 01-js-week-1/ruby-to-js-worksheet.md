@@ -168,6 +168,8 @@ end
 ```js
 function comparisonPractice(x,y) { //Don't delete this
 
+  // Your code here
+
 }//don't delete this either
 ```
 
@@ -234,12 +236,12 @@ Remember, don't assign `x` or `y`!
 ##### !hint
 ```javascript
 if (x > y || x === y) {
-if (x > y) {
-  console.log("x is bigger")
-}
-else {
-  console.log("x = y")
-}
+  if (x > y) {
+    console.log("x is bigger")
+  }
+  else {
+    console.log("x = y")
+  }
 }
 else {
   console.log("y is bigger")
@@ -249,12 +251,92 @@ else {
 
 ### !end-challenge
 
-1. Ruby
-    ```ruby
-    10.times do |i|
-      puts i * i
-    end
-    ```
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: c7d71bcc-ec8d-4ebc-a919-8c432a22056a
+* title: Problem  3
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+Convert the following Ruby into JS:
+
+```ruby
+10.times do |i|
+  puts i * i
+end
+```
+
+##### !end-question
+
+##### !placeholder
+```js
+function loopPractice() {
+  // Your code here
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
+    }
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('doSomething', function() {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("Prints the right number of times", () => {
+    loopPractice();
+    expect(console.log.mock.calls.length).to.equal(10);
+
+  });
+  it("Prints the correct values", () =>{
+    loopPractice();
+    expect(console.log.mock.calls[0][0]).to.equal("0");
+    expect(console.log.mock.calls[9][0]).to.equal("81");
+  });
+});
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
     <details>
     <summary>
     Javascript
