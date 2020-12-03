@@ -320,8 +320,8 @@ describe('doSomething', function() {
   });
   it("Prints the correct values", () =>{
     loopPractice();
-    expect(console.log.mock.calls[0][0]).to.equal("0");
-    expect(console.log.mock.calls[9][0]).to.equal("81");
+    expect(console.log.mock.calls[0][0]).to.equal(0);
+    expect(console.log.mock.calls[9][0]).to.equal(81);
   });
 });
 ```
