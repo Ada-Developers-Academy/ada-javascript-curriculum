@@ -49,6 +49,10 @@ Standards:
         Type: Resource
         UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
         Path: /01-js-week-1/examples/eslintrc.examples.resource.md
+      - 
+        Type: Lesson
+        UID: 6ff0e05e-d865-4d8b-81ab-ea89b1555916
+        Path: /01-js-week-1/arrow-functions-anonymous-this.md
       -
         Type: Checkpoint
         UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
