@@ -297,7 +297,6 @@ Create a script that does the following:
 
 
 ```js
-
 /**
  * Blatantly stolen from Jest (I hate mocha/chai with an irrational passion).
  * 
@@ -312,7 +311,6 @@ function fn (impl = () => { }) {
     mockFn.mock.instances.push(this);
     try {
       const value = impl.apply(this, args); // call impl, passing the right this
-
       mockFn.mock.results.push({ type: 'return', value });
       return value; // return the value
     } catch (value) {
@@ -320,41 +318,42 @@ function fn (impl = () => { }) {
       throw value; // re-throw the error
     }
   }
-
   mockFn.mock = { calls: [], instances: [], results: [] };
   return mockFn;
 }
+  describe('testing addNums, subtractNums and multiplyNums', () => {
+    let oldConsoleLog = console.log;
+    // Mock console.log
+    beforeEach(() => {
+      console.log = fn();
+    });
+    
+    // restore console.log
+    afterEach(() => {
+      console.log = oldConsoleLog;
+    });
+    
+    it('addNums(3, 5) prints the required text and returns 8', () => {
+      expect(addNums(3, 5)).to.equal(8);
 
-describe('testFunction', () => {
-  let oldConsoleLog = console.log;
+      expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
+      expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
+    });
 
-  // Mock console.log
-  beforeEach(() => {
-    console.log = fn();
-  });
+    it('subtractNums(3, 5) prints the required text and returns -2', () => {
+      expect(subtractNums(3, 5)).to.equal(-2);
 
-  // restore console.log
-  afterEach(() => {
-    console.log = oldConsoleLog;
-  });
+      expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
+      expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
+    });
 
-  it('prints the strings requested, capitalization and spaces correct', () => {
-    console.log(addNums(3, 5));
-    console.log(subtractNums(3, 5));
-    console.log(multiplyNums(3, 5));
+    it('multiplyNums(3, 5) prints the required text and returns -2', () => {
+      expect(multiplyNums(3, 5)).to.equal(15);
 
-    expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
-    expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
-    expect(console.log.mock.calls[2][0]).to.equal(8);
-    expect(console.log.mock.calls[3][0]).to.equal("The value of a is: 3");
-    expect(console.log.mock.calls[4][0]).to.equal("The value of b is: 5");
-    expect(console.log.mock.calls[5][0]).to.equal(-2);
-    expect(console.log.mock.calls[6][0]).to.equal("The value of a is: 3");
-    expect(console.log.mock.calls[7][0]).to.equal("The value of b is: 5");
-    expect(console.log.mock.calls[8][0]).to.equal(15);
-  });
+      expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
+      expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
+    });
 });
-
 ```
 
 ##### !end-tests
