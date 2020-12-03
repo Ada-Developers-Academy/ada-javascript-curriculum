@@ -208,19 +208,20 @@ Create an `Animal` class similar to `Zine` above.  The `constructor` should take
 ```js
 describe('Animal class', function() {
 
-  it("can be instantiated with new Animal('oink');", () =>  {
-    const animal = new Animal('oink');
+  it("can be instantiated with new Animal('woof');", () =>  {
+    const animal = new Animal('woof');
 
-    expect(animal).not.toBeUndefined();
+    expect(animal).to.not.be.an('undefined');
+    expect(animal).to.be.an('Object');
   });
 
   it("can be instantiated with new Animal('oink') and have an instance variable sound", () =>  {
     const animal = new Animal('oink');
 
-    expect(animal.sound, 'new animal has a sound property').not.toBeUndefined();
-    expect(animal.sound, 'newAnimal.sound equals "oink"').toEqual('oink');
+    expect(animal.sound, 'new animal has a sound property').to.not.be.an('undefined');
+    expect(animal.sound, 'newAnimal.sound equals "oink"').to.equal('oink');
   });
-})
+});
 ```
 
 ##### !end-tests
