@@ -144,7 +144,7 @@ Below is this `Zine` class written in JavaScript.  It has `title` and `contribut
 
 <!-- trying how a repl.it iframe works -->
 
-<iframe height="400px" width="100%" src="https://repl.it/@ChrisMcAnally/AdaClass1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="600px" width="100%" src="https://repl.it/@ChrisMcAnally/AdaClass1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Classes can also be declared as an expression:
 
