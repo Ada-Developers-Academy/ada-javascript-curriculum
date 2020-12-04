@@ -103,7 +103,7 @@ In your Node REPL, input these lines. Do you get what you expect?
 1. `let simonsFavNum;`
 1. `simonsFavGame = 'butterfly soup';`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -236,7 +236,7 @@ Before running this code, predict the answers for the following questions:
 1. How many times will this for loop run? How do you know this?
 1. What will it print out?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Now run it, and compare your answers here!
@@ -307,7 +307,7 @@ Before running this code, predict the answers for the following questions:
 1. How many times will this while loop run? How do you know this?
 1. What will it print out?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Now run it, and compare your answers here!
