@@ -446,34 +446,107 @@ console.log(total)
 -->
 
 
-1. Ruby
-    ```ruby
-    i = 0
+### !challenge
 
-    while i < 3
-      puts "hi"
-      i = i + 1
-    end
+* type: code-snippet
+* language: javascript
+* id: 409c341f-4229-47fa-9a5e-f5a0ac6acc48
+* title: Problem 5
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
 
-    puts "bye"
-    ```
+##### !question
+Convert the following Ruby to JS
 
-    <details>
-    <summary>
-    Javascript
-    </summary>
+```ruby
+i = 0
 
-    ```javascript
-    let i = 0
+while i < 3
+  puts "hi"
+  i = i + 1
+end
 
-    while (i < 3) {
-      console.log("hi")
-      i = i + 1
+puts "bye"
+```
+
+##### !end-question
+
+##### !placeholder
+```js
+function helloer() {
+  // your code here
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
     }
-    console.log("bye")
-    ```
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
 
-    </details>
+describe('helloer', function() {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("Prints the right number of times", () => {
+    helloer();
+    expect(console.log.mock.calls.length).to.equal(4);
+  });
+  it("Prints the right words each time", () => {
+    helloer();
+    expect(console.log.mock.calls[0][0]).to.equal("hi");
+    expect(console.log.mock.calls[1][0]).to.equal("hi");
+    expect(console.log.mock.calls[2][0]).to.equal("hi");
+    expect(console.log.mock.calls[3][0]).to.equal("bye");
+  });
+})
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!--
+```javascript
+let i = 0
+
+while (i < 3) {
+  console.log("hi")
+  i = i + 1
+}
+console.log("bye")
+```
+
+-->
 
 1. Ruby
     ```ruby
