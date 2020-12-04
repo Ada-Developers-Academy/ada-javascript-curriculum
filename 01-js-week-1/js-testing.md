@@ -1,5 +1,7 @@
 # JavaScript Unit Testing with Jest
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=74d553b8-5678-46be-909c-ac85012f9177&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 By the end of this lesson, we should be able to...
@@ -28,10 +30,10 @@ Jest tests are run from the command line using `npm test` (more on this later). 
 
 ### Setup
 
-We will install the Jest Command-line Interface globally.  This will allow us to run our tests from the terminal similar to how we tested in Ruby.  To install the Jest CLI execute the command:
+To add jest to a node project you can add it to your development dependencies (you don't need the test suite when you deploy the app) with:
 
 ```bash
-$ npm install -g jest-cli
+npm install --save-dev jest
 ```
 
 ### Exercise
@@ -126,11 +128,45 @@ to:
     test.skip('isPangram() is defined', () => {
 ```
 
-## Exercise With A Neighbor
+## Individual Exercise
 
 Read through the couple of implemented tests in `is_pangram.test.js` and the stubbed out tests.
 
 Now use a test-driven development workflow to implement the `isPangram()` function and complete the stubbed-out tests. Remember the TDD cycle: pseudocode-red-green-refactor!
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: testable-project
+* id: 9839d944-0ae4-4fc9-85c9-4c1a2df50d93
+* title: Submitting the project
+* upstream: https://github.com/AdaGold/JS-Testing
+* validate_fork: false
+* points: 3
+* topics: javascript, testing, js-testing
+
+##### !question
+
+Submit your repo address in Github.  You only need to complete Pangram.
+
+##### !end-question
+
+##### !placeholder
+
+Your repo URL
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Going Further
 
