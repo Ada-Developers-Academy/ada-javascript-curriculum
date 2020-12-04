@@ -1,5 +1,7 @@
 # Intro to Functions!
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=35e061a2-f926-4515-a3f8-ab8d014bd70e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Learn and practice the syntax for defining and calling/invoking functions in JavaScript
@@ -44,7 +46,7 @@ Open the `node` REPL and copy-and-paste in the following expressions. What do yo
     ```
 1. `bark;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -70,13 +72,22 @@ When we defined the function, we gave it the variable keyword `const`. We could 
 
 ### Exercise: Make An Animal Noise Function
 
-Given the `bark` function as a model:
 
-```javascript
-const bark = function() {
-  console.log('Woof!');
-};
-```
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 27a13d71-519f-4005-ba8c-408ed32e12e4
+* title: Animal Noises!
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+
+Given the `bark` function as a model:
 
 Create a script that does the following:
 
@@ -86,6 +97,84 @@ Create a script that does the following:
 1. Call the `oink` function
 1. Create a third function that prints an animal noise to the terminal
 1. Call that function 5 times!
+
+##### !end-question
+
+##### !placeholder
+
+```js
+const bark = function() {
+  console.log('Woof!');
+};
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+
+/**
+ * Blatantly stolen from Jest (I hate mocha/chai with an irrational passion).
+ * 
+ * This basically lets me mock a function (console.log) so I can see what they printed
+ * and how many times they did so.
+ * 
+ * @param impl - What the real function is supposed to do.
+ */
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
+    }
+  }
+
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('testFunction', () => {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it('ribbit() prints "Ribbit!" and oink() prints "Oink!"', () => {
+    ribbit();
+    oink();
+
+    expect(console.log.mock.calls[0][0]).to.equal(`Ribbit!`);
+    expect(console.log.mock.calls[1][0]).to.equal(`Oink!`);
+  });
+});
+
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Functions Can Have Parameters
 
@@ -140,7 +229,7 @@ Open the `node` REPL and copy-and-paste in the following expressions. What do yo
 1. `catNoise = meow();`
 1. `catNoise;`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Compare your answers here
@@ -156,6 +245,20 @@ Open the `node` REPL and copy-and-paste in the following expressions. What do yo
 
 
 ## Exercise: Make Calculator Functions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: c06055a9-5d82-4aa9-beaf-bc4cbc636c12
+* title: Calculator kick-starter!
+* points: 1 
+* topics: javascript, js-functions
+
+##### !question
 
 Create a script that does the following:
 
@@ -179,11 +282,102 @@ Create a script that does the following:
 1. After that, print the variable `product`
 1. Run the script to confirm it runs, and runs as expected
 
-Compare with a neighbor and check you're both in the right direction. Now, refactor:
+
+##### !end-question
+
+##### !placeholder
+
+```js
+
+```
+
+##### !end-placeholder
+
+##### !tests
+
+
+```js
+/**
+ * Blatantly stolen from Jest (I hate mocha/chai with an irrational passion).
+ * 
+ * This basically lets me mock a function (console.log) so I can see what they printed
+ * and how many times they did so.
+ * 
+ * @param impl - What the real function is supposed to do.
+ */
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
+    }
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+  describe('testing addNums, subtractNums and multiplyNums', () => {
+    let oldConsoleLog = console.log;
+    // Mock console.log
+    beforeEach(() => {
+      console.log = fn();
+    });
+    
+    // restore console.log
+    afterEach(() => {
+      console.log = oldConsoleLog;
+    });
+    
+    it('addNums(3, 5) prints the required text and returns 8', () => {
+      expect(addNums(3, 5)).to.equal(8);
+
+      expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
+      expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
+    });
+
+    it('subtractNums(3, 5) prints the required text and returns -2', () => {
+      expect(subtractNums(3, 5)).to.equal(-2);
+
+      expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
+      expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
+    });
+
+    it('multiplyNums(3, 5) prints the required text and returns -2', () => {
+      expect(multiplyNums(3, 5)).to.equal(15);
+
+      expect(console.log.mock.calls[0][0]).to.equal("The value of a is: 3");
+      expect(console.log.mock.calls[1][0]).to.equal("The value of b is: 5");
+    });
+});
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+
+
+
+
+Once you've completed the exercise above, let's DRY up the code a little!
 
 1. Create a `printInputs` that takes in two parameters. It prints out `"The value of a is: ${a}"`. It prints out `"The value of b is: ${b}"`. It returns `null`.
 1. Refactor the `addNums`, `subtractNums`, and `multiplyNums` functions to call `printInputs()` inside of it.
 1. Delete any redundant code!
+
+If you've done it correctly, the tests should still pass and there will be significantly less redundant code :D
 
 ## Additional Resources
 * [MDN on Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)

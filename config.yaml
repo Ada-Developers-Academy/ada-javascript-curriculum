@@ -33,6 +33,10 @@ Standards:
         Type: Lesson
         UID: ead12e11-67b9-43c1-b3f2-dd0355c63e47
         Path: /01-js-week-1/variables-conditionals-iteration.md
+      -
+        Type: Lesson
+        UID: 01fc3ca7-2c2e-4201-8b86-14438d8f1a77
+        Path: /01-js-week-1/functions-intro.md
       - 
         Type: Lesson
         UID: c95a8cd5-e90f-42aa-a457-e4162b4f581f
