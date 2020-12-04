@@ -1,5 +1,7 @@
 # Object-Oriented Classes in JavaScript
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=1d8abd30-023f-4e49-99aa-ac8600326408&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 By the end of this lesson we will be able to...
@@ -142,23 +144,9 @@ When you create a new `Zine` instance, the `initialize` method runs and sets the
 
 Below is this `Zine` class written in JavaScript.  It has `title` and `contributor` attributes set in the `constructor` method and a `toString` method which outputs the object as a String.  Notice that everything in a class falls between the curly braces **without any commas to separate each item.**
 
-```javascript
-class Zine {
-  constructor(title, contributor) {
-    this.title = title;
-    this.contributor = contributor;
-  }
+<!-- trying how a repl.it iframe works -->
 
-  toString() {
-    return `${this.title} by ${this.contributor}`;
-  }
-}
-
-const zine = new Zine('So you want to be a wizard', 'Julia Evans');
-
-console.log(zine.toString());
-// So you want to be a wizard by Julia Evans
-```
+<iframe height="600px" width="100%" src="https://repl.it/@ChrisMcAnally/AdaClass1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Classes can also be declared as an expression:
 
@@ -190,7 +178,84 @@ const wizardZine = new Zine('So you want to be a wizard', 'Evans');
 > Constructor Ran!
 ```
 
-**Exercise**:  With a fellow classmate create an `Animal` class similar to `Zine` above.  The `constructor` should take a `sound` parameter and save it in an instance variable.  Then create an instance of the class.  Verify that it works.
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 3adaa8df-adcf-4c78-88f4-d94e9f66310e
+* title: Creating a class
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, js-classes
+
+##### !question
+
+Create an `Animal` class similar to `Zine` above.  The `constructor` should take a `sound` parameter and save it in an instance variable.  Then create an instance of the class.  Verify that it works.
+
+##### !end-question
+
+##### !placeholder
+
+```js
+
+```
+
+##### !end-placeholder
+
+##### !tests
+
+
+```js
+describe('Animal class', function() {
+
+  it("can be instantiated with new Animal('woof');", () =>  {
+    const animal = new Animal('woof');
+
+    expect(animal).to.not.be.an('undefined');
+    expect(animal).to.be.an.instanceof(Animal);
+  });
+
+  it("can be instantiated with new Animal('oink') and have an instance variable sound", () =>  {
+    const animal = new Animal('oink');
+
+    expect(animal.sound, 'new animal has a sound property').to.not.be.an('undefined');
+    expect(animal.sound, 'newAnimal.sound equals "oink"').to.equal('oink');
+  });
+});
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+##### !hint
+
+```js
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+}
+```
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+```js
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+}
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Instance Methods
 
@@ -217,7 +282,127 @@ console.log(wizardZine.totalPrice());
 > 1.08
 ```
 
-**Exercise**:  For our `Animal` class, create a `speak` method which will print the sound to the console.  Try it out to verify that the method is working.
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 2eaceaf9-025d-4653-9107-da96cdfae070
+* title: Instance Methods
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+* topics: javascript, js-classes
+
+##### !question
+
+For our `Animal` class, create a `speak` method which will print the sound to the console.  Try it out to verify that the method is working.
+
+##### !end-question
+
+##### !placeholder
+
+```js
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+/**
+ * Blatantly stolen from Jest because I don't know how to mock functions in Mocha.
+ * 
+ * This basically lets me mock a function (console.log) so I can see what they printed
+ * and how many times they did so.
+ * 
+ * @param impl - What the real function is supposed to do.
+ */
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
+    }
+  }
+
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('Animal Speak', function() {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("will make (new Animal('woof')).speak() print 'woof' to console", () => {
+    const animal = new Animal('woof');
+
+    animal.speak();
+
+    expect(console.log.mock.calls[0][0]).to.equal('woof');
+  });
+});
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+##### !hint
+
+```javascript
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+  
+  speak() {
+      console.log(this.sound);
+  }
+}
+```
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+```javascript
+class Animal {
+  constructor(sound) {
+    this.sound = sound;
+  }
+  
+  speak() {
+      console.log(this.sound);
+  }
+}
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Static Methods
 
@@ -293,6 +478,7 @@ In the example above we can use the `super` keyword to access the parent class' 
 ## Summary
 
 In this lesson we have seen:
+
 - How to use classes to create object instances
 - How to use a constructor to set up a new object in proper state
 - Create static methods using the `static` keyword
