@@ -95,7 +95,7 @@ describe('ageChecker', () => {
   it("Prints correctly for same age person (person_age = 2)", () => {
     ageChecker(2);
     expect(console.log.mock.calls.length).to.equal(1);
-    expect(console.log.mock.calls[0][0]).to.equal("They’re the same!");
+    expect(console.log.mock.calls[0][0]).to.match(/They[\’\']re the same!/);
   });
 });
 ```
