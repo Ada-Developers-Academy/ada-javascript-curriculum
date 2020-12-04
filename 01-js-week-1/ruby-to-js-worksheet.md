@@ -300,7 +300,7 @@ function fn (impl = () => { }) {
   return mockFn;
 }
 
-describe('doSomething', function() {
+describe('loopPractice', function() {
   let oldConsoleLog = console.log;
 
   // Mock console.log
@@ -316,7 +316,6 @@ describe('doSomething', function() {
   it("Prints the right number of times", () => {
     loopPractice();
     expect(console.log.mock.calls.length).to.equal(10);
-
   });
   it("Prints the correct values", () =>{
     loopPractice();
@@ -328,6 +327,102 @@ describe('doSomething', function() {
 
 ##### !end-tests
 
+##### !hint 
+Make sure you are printing out numbers, not strings!
+##### !end-hint
+##### !hint
+Javascript doesn't have a concept like `times`, instead, consider using a `for` loop.
+##### !end-hint
+##### !hint
+Our solution:
+
+```javascript
+for (let i = 0; i< 10; i += 1) {
+  console.log(i*i);
+}
+```
+##### !end-hint
+### !end-challenge
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: d43ab385-5309-4640-b78e-85377dd52bee
+* title: Problem 4
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+Convert the following Ruby into JS:
+
+```ruby
+total = 0
+
+(1..3).each do |i|
+  total = total + i
+  puts total
+end
+
+puts total
+```
+
+##### !end-question
+
+##### !placeholder
+```js
+function totaler() {
+  // Your code here
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
+    }
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
+
+describe('totaler', function() {
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("Totals the numbers and prints appropriately", () => {
+    totaler();
+    expect(console.log.mock.calls.length).to.equal(4);
+    expect(console.log.mock.calls[3][0]).to.equal(6);
+  });
+})
+```
+
+##### !end-tests
+
 <!-- other optional sections -->
 <!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
@@ -335,49 +430,21 @@ describe('doSomething', function() {
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
+<!-- 
 
-    <details>
-    <summary>
-    Javascript
-    </summary>
 
-    ```javascript
+```javascript
+let total = 0
 
-    for (let i = 0; i< 10; i += 1) {
-      console.log(i*i)
-    }
-    ```
+for (let i = 1; i<=3; i+=1) {
+  total += i;
+  console.log(total);
+} 
 
-    </details>
+console.log(total)
+```
+-->
 
-1. Ruby 
-    ```ruby
-    total = 0
-
-    (1..3).each do |i|
-      total = total + i
-    end
-
-    puts total
-    ```
-
-    <details>
-    <summary>
-    Javascript
-    </summary>
-
-    ```javascript
-    let total = 0
-
-    for (let i = 1; i<=3; i+=1) {
-      total += i
-    } 
-
-    console.log(total)
-    ```
-
-    </details>
 
 1. Ruby
     ```ruby
