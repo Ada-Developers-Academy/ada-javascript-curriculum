@@ -58,6 +58,10 @@ Standards:
         UID: f0d68e28-4087-4d4a-bf4f-b5d91e02496d
         Path:  /01-js-week-1/js-testing.md
       -
+        Type: Lesson
+        UID: 9a100534-5471-492e-bc53-46ce1b6407b1
+        Path: /01-js-week-1/closures-intro.md
+      -
         Type: Resource
         UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
         Path: /01-js-week-1/examples/eslintrc.examples.resource.md
