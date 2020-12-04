@@ -615,7 +615,7 @@ describe('fruitLover', function() {
     expect(console.log.mock.calls.length).to.equal(3);
   });
   it("Prints the right words each time", () => {
-    fruitLover(["banana", "apple", "kiwi", "tomato"]);
+    fruitLover(["apple", "kiwi", "banana", "tomato"]);
     expect(console.log.mock.calls[0][0]).to.equal("I love apple!");
     expect(console.log.mock.calls[1][0]).to.equal("I love kiwi!");
     expect(console.log.mock.calls[2][0]).to.equal("I love banana!");
@@ -635,8 +635,6 @@ describe('fruitLover', function() {
 
 <!-- 
 ```javascript
-//for..in
-const fruits = ["banana", "apple", "kiwi"]
 for(let i in fruits) {
   console.log(`I love ${fruits[i]}!`)
 }
@@ -673,7 +671,7 @@ puts total
 
 ##### !placeholder
 ```js
-function genericTotaler(numberList) {
+function genericTotaler(values) {
   // Your code here
 }
 ```
@@ -785,7 +783,7 @@ end
 
 ##### !placeholder
 ```js
-function caseChecker() {
+function caseChecker(values) {
   // Your code here
 }
 ```
