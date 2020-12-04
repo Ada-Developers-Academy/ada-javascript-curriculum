@@ -537,112 +537,331 @@ describe('helloer', function() {
 
 <!--
 ```javascript
-let i = 0
+let i = 0;
 
 while (i < 3) {
-  console.log("hi")
+  console.log("hi");
   i = i + 1
 }
-console.log("bye")
+console.log("bye");
 ```
 
 -->
 
-1. Ruby
-    ```ruby
-    fruits = ["banana", "apple", "kiwi"]
-    fruits.each do |fruit|
-      puts "I love #{fruit}!"
-    end
-    ```
+### !challenge
 
-    <details>
-    <summary>
-    Javascript
-    </summary>
+* type: code-snippet
+* language: javascript
+* id: aea3408f-aef6-4e03-b257-a42a0f0e6e07
+* title: Problem 6
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
 
-    ```javascript
-    //for..in
-    const fruits = ["banana", "apple", "kiwi"]
-    for(let i in fruits) {
-      console.log(`I love ${fruits[i]}!`)
+##### !question
+Convert the following Ruby to JS
+
+```ruby
+fruits.each do |fruit|
+  puts "I love #{fruit}!"
+end
+```
+
+##### !end-question
+
+##### !placeholder
+```js
+function fruitLover(fruits) {
+  // your code here
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
     }
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
 
-    //forEach
-    const fruits2 = ["banana", "apple", "kiwi"]
-    fruits2.forEach(fruit => console.log(`I love ${fruit}!`))
-    ```
+describe('fruitLover', function() {
 
-    </details>
+  let oldConsoleLog = console.log;
 
-1. Ruby
-    ```ruby
-    total = 0
-    values = [4, 6, 2, 8, 11]
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
 
-    values.each do |value|
-        total = total + value
-    end
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
 
-    puts total
-    ```
+  it("Prints the right number of times", () => {
+    fruitLover(["banana", "apple", "kiwi"]);
+    expect(console.log.mock.calls.length).to.equal(3);
+  });
+  it("Prints the right words each time", () => {
+    fruitLover(["banana", "apple", "kiwi", "tomato"]);
+    expect(console.log.mock.calls[0][0]).to.equal("I love apple!");
+    expect(console.log.mock.calls[1][0]).to.equal("I love kiwi!");
+    expect(console.log.mock.calls[2][0]).to.equal("I love banana!");
+    expect(console.log.mock.calls[3][0]).to.equal("I love tomato!");
+  });
+})
+```
 
-    <details>
-    <summary>
-    Javascript
-    </summary>
+##### !end-tests
 
-    ```javascript
-    //for..in
-    let total = 0
-    const values = [4, 6, 2, 8, 11]
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
-    for(let i in values) {
-        total = total + values[i]
+### !end-challenge
+
+<!-- 
+```javascript
+//for..in
+const fruits = ["banana", "apple", "kiwi"]
+for(let i in fruits) {
+  console.log(`I love ${fruits[i]}!`)
+}
+
+//forEach
+const fruits2 = ["banana", "apple", "kiwi"]
+fruits2.forEach(fruit => console.log(`I love ${fruit}!`))
+```
+-->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 5f5c06bf-d6cd-4047-a474-2b35c7b6d1f2
+* title: Problem 7
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+Convert the following Ruby to JS
+
+```ruby
+total = 0
+
+values.each do |value|
+  total = total + value
+end
+
+puts total
+```
+
+##### !end-question
+
+##### !placeholder
+```js
+function genericTotaler(numberList) {
+  // Your code here
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
     }
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
 
-    console.log(total)
+describe('genericTotaler', function() {
 
-    //forEach
-    let total = 0
-    const values = [4, 6, 2, 8, 11]
+  let oldConsoleLog = console.log;
 
-    values.forEach(value => total += value)
-        
-    console.log(total)
-    ```
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
 
-    </details>
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
 
-1. Ruby
-    ```ruby
-    values = [8, 5, 3, 10, 14, 2]
-    values.each do |value|
-      if value == 10
-        puts "Special case!"
-      else
-        puts "Regular values like #{value}"
-      end
-    end
-    ```
+  it("Prints the right number of times", () => {
+    genericTotaler([5,6,7]);
+    expect(console.log.mock.calls.length).to.equal(1);
+  });
+  it("Prints the right total", () => {
+    genericTotaler([4, 6, 2, 8, 11]);
+    expect(console.log.mock.calls[0][0]).to.equal(31);
+  });
+})
+```
 
-    <details>
-    <summary>
-    Javascript
-    </summary>
+##### !end-tests
 
-    ```javascript
-    const values = [8, 5, 3, 10, 14, 2]
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
-    for(let i in values) {
-      let value = values[i]
-      if (value == 10) {
-        console.log("Special case!")
-      }
-      else {
-        console.log(`Regular values like ${value}`)
-      }
+### !end-challenge
+
+<!--
+```javascript
+//for..in
+let total = 0
+const values = [4, 6, 2, 8, 11]
+
+for(let i in values) {
+    total = total + values[i]
+}
+
+console.log(total)
+
+//forEach
+let total = 0
+const values = [4, 6, 2, 8, 11]
+
+values.forEach(value => total += value)
+    
+console.log(total)
+```
+-->
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: javascript
+* id: 0c109374-3703-40cb-b43d-67a9f16e32ec
+* title: Problem 8
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
+Convert the following Ruby into JS
+```ruby
+values.each do |value|
+  if value == 10
+    puts "Special case!"
+  else
+    puts "Regular values like #{value}"
+  end
+end
+```
+
+##### !end-question
+
+##### !placeholder
+```js
+function caseChecker() {
+  // Your code here
+}
+```
+
+##### !end-placeholder
+
+##### !tests
+```js
+function fn (impl = () => { }) {
+  const mockFn = function (...args) {
+    mockFn.mock.calls.push(args);
+    mockFn.mock.instances.push(this);
+    try {
+      const value = impl.apply(this, args); // call impl, passing the right this
+      mockFn.mock.results.push({ type: 'return', value });
+      return value; // return the value
+    } catch (value) {
+      mockFn.mock.results.push({ type: 'throw', value });
+      throw value; // re-throw the error
     }
-    ```
+  }
+  mockFn.mock = { calls: [], instances: [], results: [] };
+  return mockFn;
+}
 
-    </details>
+describe('genericTotaler', function() {
+
+  let oldConsoleLog = console.log;
+
+  // Mock console.log
+  beforeEach(() => {
+    console.log = fn();
+  });
+
+  // restore console.log
+  afterEach(() => {
+    console.log = oldConsoleLog;
+  });
+
+  it("Prints the right number of times", () => {
+    caseChecker([5,6,7,10,12]);
+    expect(console.log.mock.calls.length).to.equal(5);
+  });
+  it("Prints the right text each time", () => {
+    caseChecker([8, 5, 3, 10, 14, 2]);
+    expect(console.log.mock.calls[0][0]).to.equal("Regular values like 8");
+    expect(console.log.mock.calls[1][0]).to.equal("Regular values like 5");
+    expect(console.log.mock.calls[2][0]).to.equal("Regular values like 3");
+    expect(console.log.mock.calls[3][0]).to.equal("Special case!");
+    expect(console.log.mock.calls[4][0]).to.equal("Regular values like 14");
+    expect(console.log.mock.calls[5][0]).to.equal("Regular values like 2");
+  });
+})
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- 
+```javascript
+const values = [8, 5, 3, 10, 14, 2]
+
+for(let i in values) {
+  let value = values[i]
+  if (value == 10) {
+    console.log("Special case!")
+  }
+  else {
+    console.log(`Regular values like ${value}`)
+  }
+}
+```
+-->
