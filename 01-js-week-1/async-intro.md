@@ -16,7 +16,7 @@ There is a series of things that happens between the moment you make the order r
 
 In pain-staking detail, with a neighbor, outline all of the actions you would do that start at picking up the phone, and end at eating your meal.
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>
     No, seriously. Take 3 minutes to make a list of the actions you do. After that, then read more here.
   </summary>
