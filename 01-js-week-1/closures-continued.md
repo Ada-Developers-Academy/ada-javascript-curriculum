@@ -1,5 +1,15 @@
 # Closures Continued
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=68c49b13-b2a2-4009-889e-ab9800fa68f1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+## Learning Goals
+
+By the end of this lesson we will be able to...
+
+- Explain the concept of a closure
+- Identify a closure in existing code
+- Describe how a closure is useful with browser-based code
+
 ## Introduction
 
 Often when building a single page application, you will need to have many UI elements that each do something similar. An example of this is a list of contacts, where clicking on the name of a contact pops up a modal showing details.
