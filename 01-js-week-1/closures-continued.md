@@ -41,11 +41,16 @@ Open up Firefox Developer tools and go to the console.  Then type `document` and
 
 You get an HTMLDocument object, which you can expand by clicking on the little triangle.  
 
+![js document object](images/js-document.png)
+
 With the `window` and `document` object you can interact with the properties of the HTML and web browser and call functions on them as well.  
 
 For example you can call `document.getElementById('idValue');` and you get an individual HTML element.
 
 For example on the [Ada Webpage](https://adadevelopersacademy.org/), I can go to the console and enter `document.getElementById('topbar')` and it returns a `div` element.  I can also do: `document.querySelector('#topbar')` and it returns the same, the difference being that I'm entering a CSS selector.
+
+![getElementById result](images/document-get-element-by-id.png)
+![document.querySelector](images/document-queryselector.png)
 
 Once we have an HTML element we can tell it to call a function when an "event" happens, basically when a specific thing, usually a user action, happens to the element.
 
