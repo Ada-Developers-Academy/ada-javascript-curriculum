@@ -89,4 +89,6 @@ Standards:
       - success criteria
     ContentFiles:
       -
-    
+        Type: Lesson
+        UID: 7072aded-54cc-4a9f-aba4-5c7d728a47e9
+        Path: /02-js-week-2/axios-get.md
