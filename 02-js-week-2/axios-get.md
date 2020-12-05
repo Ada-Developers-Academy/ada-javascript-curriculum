@@ -31,7 +31,7 @@ Answer the following questions:
 4. What is the syntax that _makes_ the request?
 5. What happens with the response that comes back?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     Check your answers here.
@@ -154,7 +154,7 @@ Adding spacing may help us see that `then` takes in a function. Specifically, `t
 
 Here, we give it an anonymous function that takes in one argument named `response`.
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     By the way, we <strong>could</strong> pass in functions that aren't anonymous functions and it would work. Click here to see an example.
@@ -280,7 +280,7 @@ Take a minute to play with the white space if it helps.
 
 Write the pseudocode for a script that sends a request for ISS pass times for Seattle, then loops through the times in the response and prints them out to the command line.
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 
   <summary>
     When you're finished with the pseudocode, check our implementation and talk about it with a neighbor. Our implementation did research on how to convert from a unix time stamp to a readable date in JavaScript.
