@@ -81,3 +81,13 @@ Standards:
         Type: Checkpoint
         UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
         Path: /01-js-week-1/js-adagrams.checkpoint.md
+  - Title: Js Week 1
+    Description: Js Week 1
+    UID: c98d17d95358299af09b0b276d67a3e6
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 8c72d947-2141-4448-b08e-f70aecafe1ef
+        Path: /02-js-week-2/async-intro.md
