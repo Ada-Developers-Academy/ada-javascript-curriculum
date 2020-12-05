@@ -35,7 +35,7 @@ You may hear the term "vanilla" in regards to JavaScript.  This just means using
 
 ### Window & Document
 
-In the browser JavaScript has access to two objects `window` and `document`.  The `window` object represents the open browser window and `document` represents the HTML document or DOM.  
+In the browser JavaScript has access to two objects `window` and `document`.  The `window` object represents the open browser window and `document` represents the HTML document or DOM (document is actually an attribute of `window`).  
 
 Open up Firefox Developer tools and go to the console.  Then type `document` and hit enter, what do you get?
 
