@@ -27,8 +27,42 @@ Because the UI elements have such similar behavior, we want to use the same func
 
 **A closure is a way to attach some extra information to a function.**
 
-
 Doing event handling in the browser is something new and we will handle it a bit differently in React.  However these are common use-cases where people take advantage of closures when interacting with the DOM.
+
+## A bit on JS "vanilla" in the Browser
+
+You may hear the term "vanilla" in regards to JavaScript.  This just means using regular JavaScript without a framework.  A lot of developers these days only use frameworks because they make interacting with web pages much easier.  That said, it can be quite useful to know a few things about "vanilla" JavaScript and how it interacts with the browser.
+
+### Window & Document
+
+In the browser JavaScript has access to two objects `window` and `document`.  The `window` object represents the open browser window and `document` represents the HTML document or DOM.  
+
+Open up Firefox Developer tools and go to the console.  Then type `document` and hit enter, what do you get?
+
+You get an HTMLDocument object, which you can expand by clicking on the little triangle.  
+
+With the `window` and `document` object you can interact with the properties of the HTML and web browser and call functions on them as well.  
+
+For example you can call `document.getElementById('idValue');` and you get an individual HTML element.
+
+For example on the [Ada Webpage](https://adadevelopersacademy.org/), I can go to the console and enter `document.getElementById('topbar')` and it returns a `div` element.  I can also do: `document.querySelector('#topbar')` and it returns the same, the difference being that I'm entering a CSS selector.
+
+Once we have an HTML element we can tell it to call a function when an "event" happens, basically when a specific thing, usually a user action, happens to the element.
+
+This is where `domElement.addEventListener("click", someFunction);` comes in.  We call the function `addEventListener` and tell it what kind of event to lisent for (keypress, click etc) and then we give it a callback function to invoke, when that event occurs.
+
+So in [our example with the buttons](https://codesandbox.io/s/kind-ritchie-6z3dz)
+
+```javascript
+// Find a DOM element with the CSS selector `button.${color}`
+const element = document.querySelector(`button.${color}`);
+
+// Use buildClickHandler to create a function with a closure
+const clickHandler = buildClickHandler(color);
+
+// Tell the DOM element to call `clickHandler` when it's clicked on.
+element.addEventListener("click", clickHandler);
+```
 
 ## Closures with vanilla (plain) JavaScript
 
@@ -61,7 +95,7 @@ if (document.readyState === "loading") {
 
 ### The mainFunction
 
-The `mainFunction` takes a list of colors and loops through them.  It finds an HTML element with the CSS selector `button.${color}`.  Then it creates a click handler for that color (more later).  Lastly it tells the browser that when that element is clicked (the click event) run the `clickHandler` function.
+The `mainFunction` takes a list of colors and loops through them.  Then it iterates through the block of code we reviewed earlier.  It finds an HTML element with the CSS selector `button.${color}`.  Then it creates a click handler for that color (more later).  Lastly it tells the browser that when that element is clicked (the click event) run the `clickHandler` function.
 
 ```javascript
 const mainFunction = () => {
@@ -93,7 +127,7 @@ Take a look at the following code sanboxes:
 - [Stopwatch](https://codesandbox.io/s/stopwatch-nyd9o)
 - [Helpful Hints](https://codesandbox.io/s/helpful-hints-f9utb)
 
-With your neighbors, walk through the code and be able to identify in each example:
+Walk through the code and be able to identify in each example:
 
 1. Where is the closure?
 1. What does the code do?
