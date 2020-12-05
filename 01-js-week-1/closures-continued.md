@@ -162,3 +162,9 @@ You want to write code to make the buttons track the number of times each were c
 - How would you need to change your code to display 1000 buttons?
 
 When you finish or if you get stuck after 20 minutes you can check out our [solution](https://codesandbox.io/s/button-clicks-c99v2).
+
+## Summary
+
+In this lesson we looked at how we can use closures with callback functions for JavaScript in the browser.  We created callback functions using a closure and used them to interact with an HTML document (the DOM).  Closures are functions that are created with persistent information, so that they can remember things from one call to the next. 
+
+You can find a closure by looking for a function that returns a new function and identifying variables in the original function that the newly generated function uses.
