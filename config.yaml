@@ -81,8 +81,9 @@ Standards:
         Type: Checkpoint
         UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
         Path: /01-js-week-1/js-adagrams.checkpoint.md
-  - Title: Js Week 1
-    Description: Js Week 1
+  - 
+    Title: Js Week 2
+    Description: Async Api Calls and Intro to ReactJS
     UID: c98d17d95358299af09b0b276d67a3e6
     SuccessCriteria:
       - success criteria
