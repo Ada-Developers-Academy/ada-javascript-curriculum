@@ -16,6 +16,13 @@ Often when building a single page application, you will need to have many UI ele
 
 A simpler example is a set of buttons which can each change the color of a box on the screen, [as in this codesandbox](https://codesandbox.io/s/kind-ritchie-6z3dz). Don't worry too much about the code itself yet, just the functionality of the buttons.
 
+<iframe src="https://codesandbox.io/embed/kind-ritchie-6z3dz?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:600px; border:0; border-radius: 4px; overflow:hidden;"
+     title="kind-ritchie-6z3dz"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 Because the UI elements have such similar behavior, we want to use the same function to handle each one. However, that function needs to know a little bit of extra information about which element it's attached to. This is where closures come in.
 
 **A closure is a way to attach some extra information to a function.**
