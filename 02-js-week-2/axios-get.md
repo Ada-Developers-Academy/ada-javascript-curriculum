@@ -428,7 +428,7 @@ As we get more advanced into JavaScript, we'll have many more techniques to work
 * id: 00dfbc09-651a-4f0f-af32-0372aabc4de9
 * title: Difference between `then` and `catch`
 * points: 1
-* topics: javascript, asynchronous programming, axios
+* topics: javascript, asynchronous, axios
 
 ##### !question
 
@@ -470,7 +470,7 @@ Both functions are called on the return value of `axios.get()` and take callback
 * id: e1606c9e-bb23-4d95-a6b5-72d38e2ecac3
 * title: Asynchronous Bugs
 * points: 1
-* topics: javascript, asynchronous programming, axios
+* topics: javascript, asynchronous, axios
 
 ##### !question
 
