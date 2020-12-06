@@ -417,6 +417,91 @@ Right now, it's likely that we don't need to do anything too special to work wit
 
 As we get more advanced into JavaScript, we'll have many more techniques to work with this.
 
+## Learning Comprehension
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 00dfbc09-651a-4f0f-af32-0372aabc4de9
+* title: Difference between `then` and `catch`
+* points: 1
+* topics: javascript, asynchronous programming, axios
+
+##### !question
+
+Explain the difference between `then` and `catch` in Axios?
+
+##### !end-question
+
+##### !placeholder
+
+How are then and catch different?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Both functions are called on the return value of `axios.get()` and take callback functions, but `then` is called if the http request is successful (200s code) and `catch` is called if the request fails (300+ response code).
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: e1606c9e-bb23-4d95-a6b5-72d38e2ecac3
+* title: Asynchronous Bugs
+* points: 1
+* topics: javascript, asynchronous programming, axios
+
+##### !question
+
+In your own words explain the bug with the embedded repl.it code above?
+
+##### !end-question
+
+##### !placeholder
+
+What went wrong with the code?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because `axios.get` is asynchronous the `console.log` commands run before the api's get request finishes!
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Conclusion
 
 - axios is a JavaScript library that handles interacting with an API
