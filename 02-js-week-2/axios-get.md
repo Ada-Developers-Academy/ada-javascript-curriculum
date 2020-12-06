@@ -372,7 +372,8 @@ Because this is asynchronous, we sometimes need to tailor our code to anticipate
 
 Observe this bug:
 
-```js
+<!-- 
+```javascript
 const axios = require('axios');
 
 const dogGreeting = 'bark';
@@ -389,6 +390,9 @@ axios.get('https://dog.ceo/api/breeds/image/random/')
 console.log(`My favorite dog greeting is ${dogGreeting}`);
 console.log(`A random dog image URL is ${dogImageURL}`);
 ```
+-->
+
+<iframe height="400px" width="100%" src="https://repl.it/@ChrisMcAnally/InternationalSuperiorSales?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Reading through this code from top-to-bottom, without understanding asyncronosity, would lead us to believe that:
 1. We declare `let dogImageURL` at the top
