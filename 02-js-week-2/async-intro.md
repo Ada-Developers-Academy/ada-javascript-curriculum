@@ -102,6 +102,106 @@ To write good asynchronous code, we will have to determine and write the followi
     - If you are watching TV while waiting for the food to be delivered, how do we make sure that you aren't too hungry and you order another dinner?
     - If you are hanging out with a friend while waiting for the food to be delivered, and your friend asks you to feed them now, what do you do?
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: da98a947-e73e-4894-b320-fe2e47ec604d
+* title: What does this best describe
+* points: 1
+* topics: javascript, asynchronous programming
+
+##### !question
+
+What does this best describe:
+
+1.  I open the box
+1.  Then a take out the parts
+1.  I read step 1 of the instructions
+1.  I find the parts for step 1
+1.  I do step 1 in assembling the widget
+1.  I move on to read step 2 and repeat
+
+##### !end-question
+
+##### !options
+
+* A **synchronous** process
+* An **asynchronous** process
+
+##### !end-options
+
+##### !answer
+
+* A **synchronous** process
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: da98a947-e73e-4894-b320-fe2e47ec604d
+* title: What does this best describe
+* points: 1
+* topics: javascript, asynchronous programming
+
+##### !question
+
+What does this best describe:
+
+-  I combine the ingredients into the mixer
+-  I start the mixer and go on start my Ada CS Fun homework
+-  When the mixer finishes I will move on to putting it into the crust and then into the oven
+-  Then while it bakes I'll do more CS Fun homework
+-  When the oven finishes I'll turn off the oven and remove the pie.
+-  While it cools I'll do more CS fun homework
+-  When it's cool enough I'll eat.
+
+##### !end-question
+
+##### !options
+
+* A **synchronous** process
+* An **asynchronous** process
+
+##### !end-options
+
+##### !answer
+
+* An **asynchronous** process
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+It's asynchronous because you don't know when precisely each step of the cooking will complete, instead you start it and go on to do other things.  Then you respond when those tasks finish.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+
+
 ## Conclusion
 
 Asynchronous programming is a big, broad subject. Traditionally, we have written a lot of code that runs in a very specific order (synchronous). However, certain technologies allow us to write asynchronous code, and we'll see plenty in JavaScript.
