@@ -135,7 +135,13 @@ Similarly, `catch()` is a function that is called onto `axios.get().then()`
 
 These function calls are chained onto each other. This is a pattern we see sometimes in JavaScript. For now, it's good to know that `axios` is specifically looking for this syntax whenever we make an HTTP Request.
 
-**Be mindful to not accidentally put a `;` before calling `then()` or `catch()`!**
+### !callout-warning
+
+## Don't put a `;` between the function calls.
+
+Be mindful to not accidentally put a `;` before calling `then()` or `catch()`!
+
+### !end-callout
 
 ### Anonymous Functions
 
