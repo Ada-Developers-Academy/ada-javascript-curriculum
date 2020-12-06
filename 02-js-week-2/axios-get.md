@@ -355,7 +355,14 @@ console.log('And listened to the engine roar');
 
 When we run this code, we should see that our console output prints out the lyrics at the bottom first, **before** our API call. But our song lyrics were written *below* the lines where we made our API call. **WHY?!**
 
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-info
+
+## JavaScript Does Not Wait
+
 Our JavaScript still gets executed from top to bottom. However, when we make our GET request, our JavaScript **does not wait for it to finish executing, and proceeds with executing the next line of code.**
+
+### !end-callout
 
 That's what makes the `then` and `catch` blocks so special. They are setting up our expectations for what happens when a response comes back.
 
