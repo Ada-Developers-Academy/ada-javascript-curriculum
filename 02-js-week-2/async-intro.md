@@ -107,10 +107,11 @@ To write good asynchronous code, we will have to determine and write the followi
 Asynchronous programming is a big, broad subject. Traditionally, we have written a lot of code that runs in a very specific order (synchronous). However, certain technologies allow us to write asynchronous code, and we'll see plenty in JavaScript.
 
 To write asynchronous code, we'll generally need to anticipate four things:
+
 1. How do we make an asynchronous call?
-2. What should happen if the asynchronous call finishes successfully?
-3. What should happen if the asynchronous call doesn't finish successfully?
-4. What other pieces of code are depending on this asynchronous call?
+1. What should happen if the asynchronous call finishes successfully?
+1. What should happen if the asynchronous call doesn't finish successfully?
+1. What other pieces of code are depending on this asynchronous call?
 
 ## An Optional Introduction: Event-Driven Programming
 
