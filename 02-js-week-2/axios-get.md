@@ -95,12 +95,21 @@ axios.get('https://dog.ceo/api/breeds/image/random/')
 
 Read the code and our walk-through of the code.
 
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-info
+
+## Steps to use Axios
+
 1. We install the `axios` package for our project by running `$ npm install axios` from our project directory.
 1. We made a JS file `axios-practice.js`, and loaded `axios` with the line `const axios = require('axios');`. This should feel like requiring a gem in Ruby, but specifically, this is utilizing something that `npm` defined: the `require` function, which will look for the right `npm` package, and put those contents into a `const axios` variable.
 1. We make the `GET` request using the syntax `axios.get(SOME API ENDPOINT/URL)`
 1. We determine what happens after a successful response comes back within the `.then((response) => { })` portion
 1. We determine what happens after a failure response comes back within the `.catch((error) => { })` portion
 1. `axios` defines "success" as any response with a `2XX` status code. Therefore, responses with a `2XX` status code will go into `then`, and all responses outside of a `2XX` status code will go into `catch`.
+
+### !end-callout
+
+
 
 #### Exercise:
 
