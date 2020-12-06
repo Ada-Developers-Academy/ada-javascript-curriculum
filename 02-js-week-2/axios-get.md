@@ -26,10 +26,10 @@ You may want to refer to the [Open Notify ISS Pass Times Documentation](http://o
 Answer the following questions:
 
 1. What is the API we're using?
-2. What is the API endpoint?
-3. What kind of request are we making? What are the parts of this request?
-4. What is the syntax that _makes_ the request?
-5. What happens with the response that comes back?
+1. What is the API endpoint?
+1. What kind of request are we making? What are the parts of this request?
+1. What is the syntax that _makes_ the request?
+1. What happens with the response that comes back?
 
 <details style="max-width: 700px; margin: auto;">
 
@@ -52,6 +52,7 @@ Just like in Ruby, in JavaScript, we can make `GET` requests and `POST` requests
 The key difference to making API calls in JavaScript is that typically, these API calls will execute **asynchronously.**
 
 Therefore, in order to make a `GET` request in we should answer the following questions today:
+
 1. What is the library/tool that will help us make `GET` requests in JavaScript?
 1. How do we make the `GET` request, which is now an asynchronous call?
 1. What will happen if the `GET` request finishes successfully, and gives us back a successful response?
@@ -70,11 +71,11 @@ Now we've answered what the library/tool/package that helps us make `GET` reques
 Take 5 minutes to read through the [`axios` documentation](https://github.com/axios/axios) and find the following:
 
 1. How do we install the `axios` package onto our machine?
-2. How do we include/load the `axios` package into our JavaScript file?
-3. How do we make the `GET` request?
-4. How do we determine what to do if the `GET` request finishes successfully?
-5. How do we determine what to do if the `GET` request fails?
-6. What does "finish successfully" mean to `axios`?
+1. How do we include/load the `axios` package into our JavaScript file?
+1. How do we make the `GET` request?
+1. How do we determine what to do if the `GET` request finishes successfully?
+1. How do we determine what to do if the `GET` request fails?
+1. What does "finish successfully" mean to `axios`?
 
 ### The Answers
 
@@ -95,24 +96,24 @@ axios.get('https://dog.ceo/api/breeds/image/random/')
 Read the code and our walk-through of the code.
 
 1. We install the `axios` package for our project by running `$ npm install axios` from our project directory.
-2. We made a JS file `axios-practice.js`, and loaded `axios` with the line `const axios = require('axios');`. This should feel like requiring a gem in Ruby, but specifically, this is utilizing something that `npm` defined: the `require` function, which will look for the right `npm` package, and put those contents into a `const axios` variable.
-3. We make the `GET` request using the syntax `axios.get(SOME API ENDPOINT/URL)`
-4. We determine what happens after a successful response comes back within the `.then((response) => { })` portion
-4. We determine what happens after a failure response comes back within the `.catch((error) => { })` portion
-6. `axios` defines "success" as any response with a `2XX` status code. Therefore, responses with a `2XX` status code will go into `then`, and all responses outside of a `2XX` status code will go into `catch`.
+1. We made a JS file `axios-practice.js`, and loaded `axios` with the line `const axios = require('axios');`. This should feel like requiring a gem in Ruby, but specifically, this is utilizing something that `npm` defined: the `require` function, which will look for the right `npm` package, and put those contents into a `const axios` variable.
+1. We make the `GET` request using the syntax `axios.get(SOME API ENDPOINT/URL)`
+1. We determine what happens after a successful response comes back within the `.then((response) => { })` portion
+1. We determine what happens after a failure response comes back within the `.catch((error) => { })` portion
+1. `axios` defines "success" as any response with a `2XX` status code. Therefore, responses with a `2XX` status code will go into `then`, and all responses outside of a `2XX` status code will go into `catch`.
 
 #### Exercise:
 
 Do the following:
 
 1. Navigate to the directory you want to follow along in. (Feel free to create a new directory then `cd` into it.)
-2. Install `axios` onto your machine with `$ npm install axios`
-3. Create a file `axios-practice.js`
-4. Copy and paste the code sample from above, including the `require` statement
-5. Add inside of the anonymous function passed into `.then` (underneath the comment of a successful response) this line: `console.log('Success!');`
-6. Add inside of the anonymous function passed into `.catch` (underneath the comment of an unsuccessful response) this line: `console.log('Failure!');`
-7. Run this file with node using `$ node axios-practice.js` and observe either a success or failure printed to the terminal
-8. High-five or celebrate, if that's your jam!
+1. Install `axios` onto your machine with `$ npm install axios`
+1. Create a file `axios-practice.js`
+1. Copy and paste the code sample from above, including the `require` statement
+1. Add inside of the anonymous function passed into `.then` (underneath the comment of a successful response) this line: `console.log('Success!');`
+1. Add inside of the anonymous function passed into `.catch` (underneath the comment of an unsuccessful response) this line: `console.log('Failure!');`
+1. Run this file with node using `$ node axios-practice.js` and observe either a success or failure printed to the terminal
+1. High-five or celebrate, if that's your jam!
 
 ## What's Happening With `then` and `catch`?
 
