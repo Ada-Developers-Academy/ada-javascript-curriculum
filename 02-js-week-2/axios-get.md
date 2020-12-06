@@ -395,9 +395,10 @@ console.log(`A random dog image URL is ${dogImageURL}`);
 <iframe height="400px" width="100%" src="https://repl.it/@ChrisMcAnally/InternationalSuperiorSales?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Reading through this code from top-to-bottom, without understanding asyncronosity, would lead us to believe that:
+
 1. We declare `let dogImageURL` at the top
-2. **Then,** we make an API call, and then assign the value of the API's response data to `dogImageURL`
-3. **After that,** we print to the terminal with `console.log` the value of `dogImageURL`
+1. **Then,** we make an API call, and then assign the value of the API's response data to `dogImageURL`
+1. **After that,** we print to the terminal with `console.log` the value of `dogImageURL`
 
 However, because the API call happens asynchronously, and now our program doesn't wait for the API response to come back before proceeding with the program, our `dogImageURL` comes back as `undefined`.
 
