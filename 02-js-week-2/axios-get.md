@@ -1,4 +1,4 @@
-# Making `GET` Requests using `axios` in JavaScript
+# Get Requests With Axios
 
 ## Learning Goals
 
