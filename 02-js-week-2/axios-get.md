@@ -322,7 +322,8 @@ A key difference between this code and what we wrote in Ruby is that now our API
 
 Run this code and observe:
 
-```js
+<!--
+```javascript
 const axios = require('axios');
 
 console.log()
@@ -348,6 +349,9 @@ console.log('I put the pedal to the floor');
 console.log('Headed north on Mills Avenue');
 console.log('And listened to the engine roar');
 ```
+-->
+
+<iframe height="600px" width="100%" src="https://repl.it/@ChrisMcAnally/axios-get-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 When we run this code, we should see that our console output prints out the lyrics at the bottom first, **before** our API call. But our song lyrics were written *below* the lines where we made our API call. **WHY?!**
 
