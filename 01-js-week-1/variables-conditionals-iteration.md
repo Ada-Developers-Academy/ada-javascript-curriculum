@@ -266,9 +266,9 @@ Another kind of `for` loop in JavaScript is the `for...in` loop.  This loop iter
 const list = ['Ada', 'Jacob', 'Babbage', 'Grace'];
 let string = '';
 
-for(const element in list) {
-  string += element;
-  if (element < list.length -1) {
+for(const index in list) {
+  string += index;
+  if (index < list.length -1) {
     string += ', ';
   }
 }
@@ -281,7 +281,7 @@ const student = {
 };
 
 
-for (let key in student) {
+for (const key in student) {
   console.log(`Your ${key} is ${student[key]}`);
 }
 // Output:
