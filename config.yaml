@@ -71,6 +71,10 @@ Standards:
         Type: Resource
         UID: c30ff33d-a8f0-4df6-8ac2-471dd884d44f
         Path: /01-js-week-1/examples/eslintrc.examples.resource.md
+      - 
+        Type: Lesson
+        UID: 082bbea3-d5eb-4406-98fb-d0b8b8e341f7
+        Path: /01-js-week-1/closures-continued.md
       -
         Type: Checkpoint
         UID: 0ae815cf-1c7d-490f-9f80-5d33fb7a4007
