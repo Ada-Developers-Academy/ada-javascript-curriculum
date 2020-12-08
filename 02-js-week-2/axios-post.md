@@ -1,19 +1,21 @@
 # Making `POST` Requests using `axios` in JavaScript
 
-Setup notes: This lesson will make use of the [Ada Trip Reserving Service™ Trip API™™™](https://github.com/AdaGold/trip-api), so make sure it's running.
+Setup notes: This lesson will make use of the [Ada Trip Reserving Service™ Trip API™™™](https://github.com/AdaGold/trip-api), which is running on Heroku at [https://trektravel.herokuapp.com](https://trektravel.herokuapp.com).
 
 This lesson will use Postman, a text editor, and terminal.
 
+If you would like a refresher on how to use Postman, the [instruction video for the Video Store API project](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=055e7c13-0795-4c80-9933-ac780041803f&start=undefined) is a good resource.
+
 ## Learning Goals
 - Review exploring APIs by reading documentation and using Postman
-- Use axios to make AJAX POST requests
+- Use axios to make POST requests
 - Anticipate how to apply making asynchronous HTTP requests in fuller JavaScript programs
 
 ## Introduction
 
-Just like we used axios and AJAX to send GET requests, we can also use it to send POST requests.
+We can send POST requests using axios just like we send GET requests.
 
-Answer the following questions:
+Think through the following questions:
 
 - What are the big differences between POST and GET?
 - What did we use POST requests for in Rails?
@@ -28,7 +30,7 @@ The **Ada Trip Reserving Service™** is a service that does two things very wel
 
 Today, we will use the [Ada Trip Reserving Service™ Trip API™™™](https://github.com/AdaGold/trip-api) to create new Trip packages.
 
-Take 3 minutes with a neighbor to explore the API documentation. Use Postman to experiment. Answer the following questions:
+Take a few minutes to explore the [API documentation](https://github.com/AdaGold/trip-api/blob/master/README.md). Use Postman to experiment. Answer the following questions:
 
 1. What is the API call that lists all existing Trip packages?
 2. Make that API call and see the list of all existing Trip packages. How many are there? What are their IDs?
@@ -52,9 +54,29 @@ Take 3 minutes with a neighbor to explore the API documentation. Use Postman to 
 
 ## Making a `POST` request in axios
 
-The syntax for making a POST request is very similar to making a GET request, but we will use the `post()` function instead.
+The syntax for making a POST request is very similar to a GET request, with a few minor differences:
+- The function call is `post()` instead of `get()`
+- The function `post()` takes 2 parameters just like the `get()` function, first the URL and second the optional params object
+- The format of the params object is slightly different:
+    - GET format: 
+    ```js
+    {
+        params: {
+            category: 'tree',
+            name: 'spruce',
+        }
+    }
+    ```
+    - POST format: 
+    ```js
+    {
+        category: 'tree',
+        name: 'spruce'
+    }
+    ```
+- `post()` expects the same `then()` and `catch()` chain as `get()`
 
-The `post()` function takes in the same two parameters: URL first, and an optional params object second.
+### axios `POST` example using the Trip API to make a new trip
 
 ```js
 const axios = require('axios');
@@ -114,35 +136,28 @@ Confirm your understanding of the code by answering these questions (use the [ax
 
 #### By the way, we could inline `tripData`
 
-<details>
+We can sidestep the `tripData` variable, the difference is just stylistic:
+```js
+// ...
 
-  <summary>
-    If you were curious, we absolutely could sidestep the `tripData` variable, if that is your own preferred style
-  </summary>
+axios.post('https://trektravel.herokuapp.com/trips', {
+    name: 'Simon\'s Chill Trip to Chicago',
+    continent: 'North America',
+    about: 'A tour around good architecture and hot dogs.',
+    category: 'casual',
+    weeks: 1,
+    cost: 180,
+})
+.then( ... )
+.catch( ... )
+```
 
-  ```js
-  // ...
+### Run This Code And Look at the Response
 
-  axios.post('https://trektravel.herokuapp.com/trips', {
-      name: 'Simon\'s Chill Trip to Chicago',
-      continent: 'North America',
-      about: 'A tour around good architecture and hot dogs.',
-      category: 'casual',
-      weeks: 1,
-      cost: 180,
-    })
-    .then( ... )
-    .catch( ... )
-  ```
+Start by running this code.  It should responds with success:
 
-</details>
-
-### Let's Run This Code Together And Look at the Response
-
-When we run this code together and it responds with success:
-
-1. What kind of information does axios give us back about the response in the `response` object (made available in `then()`)?
-2. What kind of data does the Trips API™™™ give us back in the `response.data` object (made available in `then()`)?
+1. What kind of information does axios give back about the response in the `response` object (made available in `then()`)?
+2. What kind of data does the Trips API™™™ give back in the `response.data` object (made available in `then()`)?
 
 <details>
 
@@ -150,8 +165,8 @@ When we run this code together and it responds with success:
     Check your answers here.
   </summary>
 
-  1. We can view the status code, headers, response data, etc.
-  2. We should have been able to get back data that looks similar to this:
+  1. The response object contains the status code, headers, response data, etc.
+  2. The `response.data` looks similar to this:
 
   ```js
   {
@@ -166,7 +181,7 @@ When we run this code together and it responds with success:
   ```
 </details>
 
-Let's change the code to this, and run it together. Note that the trip data has been turned into `badTripData`, which has a blank `name`, so it should not be a successful call, and get into the `catch`.
+Change the code to this, and run it again. Note that the trip data has been turned into `badTripData`, which has a blank `name`, so it should not be a successful call, and get into the `catch`.
 
 ```js
 const axios = require('axios');
@@ -191,8 +206,8 @@ axios.post('https://trektravel.herokuapp.com/trips', badTripData)
   });
 ```
 
-1. What kind of information does axios give us back about the error in the `error` object (made available in `catch()`)?
-2. What kind of data does the Trips API™™™ give us back in the `error.response.data` object (made available in `catch()`)?
+1. What kind of information does axios give back about the error in the `error` object (made available in `catch()`)?
+2. What kind of data does the Trips API™™™ give back in the `error.response.data` object (made available in `catch()`)?
 
 <details>
 
@@ -200,8 +215,8 @@ axios.post('https://trektravel.herokuapp.com/trips', badTripData)
     Check your answers here.
   </summary>
 
-  1. We can view the status code, headers, response data, etc.
-  2. We should have been able to get back data that looks similar to this:
+  1. The response object contains status code, headers, response data, etc.
+  2. The `errror.data` looks similar to this:
 
   ```js
   { errors: { name: [ "can't be blank" ] } }
@@ -212,7 +227,7 @@ axios.post('https://trektravel.herokuapp.com/trips', badTripData)
 
 Using the code samples above as an example, and write a `.js` file that creates your own Trip package!
 
-Write, iterate, and run the file, until you get your own Trip package successfully created. **Note down the ID of your newly created Trip** because we'll use it soon in this lesson.
+Write, iterate, and run the file, until you get your own Trip package successfully created. **Note down the ID of your newly created Trip** because you will use it soon in this lesson.
 
 If you response comes back unsuccessful/as an error, use this chance to practice debugging. What caused the error? If the API gave back an error, you can read the details of the error in `error.response` and `error.response.data`. The text in those objects will say something useful about the error that the API sends back.
 
@@ -220,12 +235,12 @@ If all else fails, use these error messages to dive into the source code of the 
 
 ## Exercise: Reserve a Ticket On Your Own Trip
 
-Utilizing the [Ada Trip Reserving Service™ Trip API™™™](https://github.com/AdaGold/trip-api) and what you know about the `post()` syntax now, write a JS script that does the following:
+Utilizing the [Ada Trip Reserving Service™ Trip API™™™](https://github.com/AdaGold/trip-api) and the `post()` syntax, write a JS script that does the following:
 
 1. Makes an object in `const tripReservationData`, with all of the correct name/value pairs that the API specifies
 1. Creates a POST request to the right endpoint for specifically your own new Trip package that you created in the previous exercise, and that uses `tripReservationData`
-1. If the response comes back as success, our program prints `'Trip reserved successfully.'`, and then prints the value of the response's data
-1. If the response comes back as not success, our program prints `'Error occurred.'`, and then prints the value of the error response's data
+1. If the response comes back as success, the program prints `'Trip reserved successfully.'`, and then prints the value of the response's data
+1. If the response comes back as not success, the program prints `'Error occurred.'`, and then prints the value of the error response's data
 
 <details>
 
@@ -258,9 +273,7 @@ Utilizing the [Ada Trip Reserving Service™ Trip API™™™](https://github.c
 
 ## Brainstorm Applications
 
-Great work! We have some solid examples and exercises that show making HTTP requests with JavaScript. Let's brainstorm applications.
-
-With a neighbor, brainstorm a possible user-flow for a CLI program. The CLI program should allow a user to list trip packages, see details for one trip package, and reserve a ticket for one trip package.
+Great work! We have some solid examples and exercises that show making HTTP requests with JavaScript. Let's brainstorm a possible user-flow for a CLI program. The CLI program should allow a user to list trip packages, see details for one trip package, and reserve a ticket for one trip package.
 
 Then, write **pseudocode** for a JS script for that program.
 
@@ -268,25 +281,22 @@ Skip over the pseudocode details for getting user input, and make assumptions ab
 
 ### Asynchronous Code Requires Different Patterns
 
-When we got to writing pseudocode, we should have observed the following things:
+When writing pseudocode, you probably observed the following things:
 
 1. In some ways, writing the API calls in JavaScript should feel straightforward
 1. Before we can make an API call to reserve a ticket on a Trip, we needed to make sure we had a value for the `tripId` that the API call requires. However, because our code is asynchronous, we need to make sure we call `axios.post()` to the Trip Reserve endpoint **after** we get a response from making our Trip using the Trip Create endpoint, which gives us our Trip ID.
 
-Our big question that follows is: **How** do we make sure our POST request to Trip Reserve happens after we get a response from Trip Create?
+<details>
+<summary>Using the axios functions, how do you make sure the POST request to Trip Reserve happens after you get a response from Trip Create?</summary>
 
-We have a few options:
-- Make the API call to Trip Reserve in the function **inside** of `then()` chained to the Trip Create call
-- Depending on our depth of knowledge in JavaScript, approach this from a different design pattern
-- Depending on different tools/libraries available, approach this from a different design pattern
+Make the API call to Trip Reserve in the function **inside** of `then()` chained to the Trip Create call.
 
-When we write JavaScript and we **only** want to use axios and the limited JavaScript we know, we will tend to put a lot of functionality in `then()` and `catch()` blocks, and practice our knowledge of functions, and callback functions.
-
-When we introduce other tools, libraries, and programming paradigms, we will approach this from a different angle.
+For now, we will tend to put a lot of functionality in `then()` and `catch()` blocks, and practice our knowledge of functions, and callback functions.  When we introduce other tools, libraries, and programming paradigms, we will approach this from a different angle.
+</details>
 
 ## Conclusion
 
-As in Ruby, the difficult part of working with an API in JavaScript is not so much making the request, as figuring out what request to make, and what to do after. Though the setting is different, our work will follow a similar pattern:
+As in Ruby, the difficult part of working with an API in JavaScript is not making the request, but rather figuring out what request to make, and what to do afterwards. Though the setting is different, our work will follow a similar pattern:
 
 1. Explore the API using the documentation, Postman, and other tools
     - How do you need to format your data
