@@ -113,7 +113,7 @@ To write good asynchronous code, we will have to determine and write the followi
 * id: da98a947-e73e-4894-b320-fe2e47ec604d
 * title: What does this best describe
 * points: 1
-* topics: javascript, asynchronous programming
+* topics: javascript, asynch
 
 ##### !question
 
@@ -160,7 +160,7 @@ What does this best describe:
 * id: 2ad883e0-7e16-4b0b-8e9e-58519dc73c77
 * title: What does this best describe
 * points: 1
-* topics: javascript, asynchronous programming
+* topics: javascript, async
 
 ##### !question
 
