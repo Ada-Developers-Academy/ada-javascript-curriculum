@@ -156,7 +156,7 @@ axios.post('https://trektravel.herokuapp.com/trips', {
 
 ### Run This Code And Look at the Response
 
-Start by running this code.  It should responds with success:
+Start by running this code.  It should respond with success:
 
 1. What kind of information does axios give back about the response in the `response` object (made available in `then()`)?
 2. What kind of data does the Trips API™™™ give back in the `response.data` object (made available in `then()`)?
