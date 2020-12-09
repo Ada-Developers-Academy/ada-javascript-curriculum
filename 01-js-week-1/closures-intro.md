@@ -1,5 +1,7 @@
 # Intro to Closures in JavaScript
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4900e4af-b42d-4be5-bb1e-ab8a00712d89&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 This lesson assumes that you're comfortable with ES6 arrow function syntax.
 
 ## Learning Goals

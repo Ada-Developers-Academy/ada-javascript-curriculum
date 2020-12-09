@@ -87,6 +87,14 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Lesson
+        UID: 7072aded-54cc-4a9f-aba4-5c7d728a47e9
+        Path: /02-js-week-2/axios-get.md
+      -
+        Type: Lesson
+        UID: 8c72d947-2141-4448-b08e-f70aecafe1ef
+        Path: /02-js-week-2/async-intro.md
+      -
         Type: Checkpoint
         UID: 768d7a40-fac4-46a2-bcd9-7a249e87b072
         Path: /02-js-week-2/ada-pets-node.checkpoint.md
