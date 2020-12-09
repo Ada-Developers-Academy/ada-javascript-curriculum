@@ -14,8 +14,8 @@ Please check out the [project repository](https://github.com/ada-c14/js-calculat
 * type: testable-project
 * id: 81428f65-067b-4af4-afcf-7f5f32d68aac
 * title: JS Calculator
-* upstream: https://github.com/ada-c14/js-calculator
-* validate_fork: true
+* upstream: https://github.com/Ada-c14/js-calculator
+* validate_fork: false
 * points: 0
 * topics: javascript
 
@@ -65,7 +65,7 @@ PR Link
 
 ##### !answer
 
-^https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/\d?\d[\/]?
+/^https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/\d?\d[\/]?/
 
 ##### !end-answer
 
@@ -75,5 +75,6 @@ PR Link
 <!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
 ### !end-challenge
+
 
 <!-- ======================= END CHALLENGE ======================= -->
