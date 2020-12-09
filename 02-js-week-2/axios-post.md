@@ -1,5 +1,7 @@
 # Making `POST` Requests using `axios` in JavaScript
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d917a57a-afa4-4f83-a23a-ab95012a55e7&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 Setup notes: This lesson will make use of the [Ada Trip Reserving Service™ Trip API™™™](https://github.com/AdaGold/trip-api), which is running on Heroku at [https://trektravel.herokuapp.com](https://trektravel.herokuapp.com).
 
 This lesson will use Postman, a text editor, and terminal.
