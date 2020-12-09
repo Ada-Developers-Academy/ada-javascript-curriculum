@@ -13,7 +13,7 @@ Please fork and clone the [JS Adagrams](https://github.com/ada-c14/js-adagrams) 
 ### !challenge
 
 * type: testable-project
-* id: f9613be1-491c-41f9-81f0-a58c144811b0
+* id: a5bcb614-702c-4df8-a7a3-d8c6401691ae
 * title: JS Calculator
 * upstream: https://github.com/ada-c14/js-adagrams
 * validate_fork: false
@@ -66,7 +66,7 @@ PR Link
 
 ##### !answer
 
-^https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/\d?\d[\/]?
+/^https:\/\/github\.com\/[^\/]+\/[^\/]+\/pull\/\d?\d[\/]?/
 
 ##### !end-answer
 
