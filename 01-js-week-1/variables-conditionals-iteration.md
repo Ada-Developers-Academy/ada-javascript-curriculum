@@ -260,7 +260,7 @@ Before running this code, predict the answers for the following questions:
 
 ### `for...in` Loop
 
-Another kind of `for` loop in JavaScript is the `for...in` loop.  This loop iterates through the keys or indicies of an object or array.
+Another kind of `for` loop in JavaScript is the `for...in` loop.  This loop iterates through the keys or indices of an object or array.
 
 ```javascript
 const list = ['Ada', 'Jacob', 'Babbage', 'Grace'];
@@ -289,6 +289,22 @@ for (const key in student) {
 // Your cohort is 11
 // Your name is Betty Holberton
 ```
+
+### `for...of` Loop
+
+If we want to loop through the elements of an array (rather than the indices), we can use a `for...of` loop.
+
+```javascript
+const todo = ['Go for a walk', 'Take a bubble bath', 'Watch a nice movie'];
+
+for (const task of todo) {
+  console.log(`Don't forget to ${task}!`);
+}
+
+// Output:
+// Don't forget to Go for a walk!
+// Don't forget to Take a bubble bath!
+// Don't forget to Watch a nice movie!
 
 ### `while` Loop
 
