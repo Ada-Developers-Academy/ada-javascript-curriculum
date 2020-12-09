@@ -48,6 +48,12 @@ Some useful, but not required extensions for JavaScript:
 - [Prettier Eslint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint) - A formatter to fix format or style mistakes automatically.
 - [Indent Rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) - uses colors to help you match indentation.
 
+### Note on The Extension
+
+You might need to click on the ESLint extension in the bottom-right of the editor.  This is a security thing of VS Code.  You will need to enable it.
+
+![ESlint settings](images/eslint-vs-code.png)
+
 ## Linting on Existing Projects
 
 In your projects at Ada you will have a file with the rules for your linter called `.eslintrc.json`.  Here is an example `.eslintrc.json` file.
