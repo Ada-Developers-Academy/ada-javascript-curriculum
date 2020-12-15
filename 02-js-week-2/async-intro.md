@@ -79,8 +79,10 @@ Unlike the food-delivery example from above, synchronous code **executes and fin
 ## What is Asynchronous Programming?
 
 [Asynchronous Programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts) is a method of programming that intentionally breaks program flow in order to:
-1. call actions/processes outside of program flow, so that the program doesn't stop for a result
-2. define what happens when the result comes back
+
+1. Call actions/processes outside of program flow, so that the program doesn't stop for a result
+
+1. Define what happens when the result comes back
 
 How asynchronous programming is actually possible depends on the implementation/way of executing asynchronous calls.
 

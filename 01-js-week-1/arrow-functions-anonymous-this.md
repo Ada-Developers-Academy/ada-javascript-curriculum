@@ -294,4 +294,5 @@ On older browsers, newer features like Arrow Functions, template strings, etc, w
 ## Additional Resources
 
 - [MDN Docs on Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [MDN Docs on "this"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - [Learning ES6 Arrow Functions](https://www.eventbrite.com/engineering/learning-es6-arrow-functions/)
