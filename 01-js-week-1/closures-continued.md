@@ -69,6 +69,8 @@ const clickHandler = buildClickHandler(color);
 element.addEventListener("click", clickHandler);
 ```
 
+We select the button with a CSS selector, generate a function with a closure and tell the button to call the function when it's clicked.
+
 ## Closures with vanilla (plain) JavaScript
 
 Now that we've explored the concepts behind closures a bit, let's return to our [original example with the buttons](https://codesandbox.io/s/kind-ritchie-6z3dz).
